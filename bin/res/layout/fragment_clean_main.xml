@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_item_alternative" >
+
+    <com.gto.zero.zboost.function.clean.view.CleanMainTopView
+        android:id="@+id/clean_main_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/clean_main_top_height"
+        android:layout_alignParentTop="true"
+        android:background="#FF76B54B" >
+
+        <ImageView
+            android:id="@+id/clean_main_besom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/clean_main_broom" />
+    </com.gto.zero.zboost.function.clean.view.CleanMainTopView>
+
+    <include
+        android:id="@+id/clean_main_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_title_height"
+        layout="@layout/common_title_layout"
+        android:background="#000000" />
+
+    <FrameLayout
+        android:id="@+id/framid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/clean_main_title" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/clean_main_scrollview_float_height" 
+                android:visibility="invisible"/>
+
+            <com.gto.zero.zboost.common.ui.floatlistview.FloatingGroupExpandableListView
+                android:id="@+id/clean_main_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:childDivider="@color/common_listview_divider"
+                android:divider="#00000000"
+                android:fadingEdge="none"
+                android:overScrollFooter="@null"
+                android:overScrollMode="never" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/scrollViewID"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/clean_main_scrollview_height"
+            layout="@layout/fragment_clean_main_scrollview" />
+    </FrameLayout>
+
+    <include
+        android:id="@+id/clean_main_clean_btn"
+        android:layout_width="@dimen/common_round_button_layout_width"
+        android:layout_height="@dimen/common_round_button_layout_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        layout="@layout/common_round_button_layout" />
+
+</RelativeLayout>

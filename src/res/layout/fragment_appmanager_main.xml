@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_appmanager_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEEEEEE" >
+
+    <FrameLayout
+        android:id="@+id/fragment_appmanager_main_color_views_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boost_main_title_and_tab_title_height" >
+
+        <com.gto.zero.zboost.common.ui.BackgroundColorView
+            android:id="@+id/fragment_appmanager_main_install_color_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.gto.zero.zboost.common.ui.BackgroundColorView
+            android:id="@+id/fragment_appmanager_main_preinstall_color_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/fragment_appmanager_main_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include
+        android:id="@+id/fragment_appmanager_main_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_title_height"
+        android:layout_alignParentTop="true"
+        layout="@layout/common_title_layout" />
+
+    <com.gto.zero.zboost.function.appmanager.sliding.AASlidingTabLayoutApp
+        android:id="@+id/fragment_appmanager_main_tab_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boost_main_tab_title_height"
+        android:layout_below="@id/fragment_appmanager_main_title_layout" />
+
+</RelativeLayout>

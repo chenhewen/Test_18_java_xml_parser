@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Z Speed+</string>
+    <string name="action_settings">Configurações</string>
+
+    <!-- ==========字体模块========== -->
+    <string name="font_families_roboto">sans-serif</string>
+    <string name="font_families_roboto_thin">sans-serif-thin</string>
+    <string name="font_families_roboto_light">sans-serif-light</string>
+    <string name="font_families_roboto_condensed">sans-serif-condensed</string>
+
+    <!-- ========= 共用模块 ========= -->
+    <string name="common_yes">Sim</string>
+    <string name="common_no">Não</string>
+    <string name="common_ok">OK</string>
+    <string name="common_select">Selecionar</string>
+    <string name="common_delete">Deletar</string>
+    <string name="common_others">Outros</string>
+    <string name="common_stop">Parar</string>
+    <string name="common_uninstall">Desinstalar</string>
+    <string name="common_back_up">Backup</string>
+    <string name="common_cancel">Cancelar</string>
+    <string name="common_install">Instalar</string>
+    <string name="common_installed">Instalado</string>
+    <string name="common_vertion">Versão</string>
+    <string name="common_update">Atualizar</string>
+    <string name="common_insufficient_storate">Espaço de armazenamento insuficiente</string>
+    <string name="common_no_sdcard">Cartão SD não encontrado</string>
+
+    <!-- ========= 主界面 ========= -->
+    <string name="available">Disponível</string>
+    <string name="main_button_boost">Melhorar a Memória</string>
+    <string name="main_button_storage">Arquivos desnecessários</string>
+    <string name="main_button_manage">Gerenciador de app</string>
+    <string name="main_ram_total">%s Total</string>
+    <string name="main_storage_total">%s Total</string>
+    <string name="tip_press_again_to_exit">Toque novamente para sair.</string>
+
+    <!-- ========= 菜单 ========= -->
+    <string name="menu_setting">Configurações</string>
+    <string name="menu_refresh">Atualizar</string>
+    <string name="menu_feedback">Feedback</string>
+    <string name="menu_about">Sobre</string>
+
+    <!-- ========= 内存加速模块 ========= -->
+
+    <string name="boost_main_act_title">Melhorar a Memória</string>
+    <string name="boost_main_act_tab_running">Rodando</string>
+    <string name="boost_main_act_tab_autostart">Autoiniciar</string>
+    <string name="boost_running_apps_custom">%1$d Apps Selecionados</string>
+    <string name="boosting_memory_act_title">Melhorar a Memória</string>
+    <string name="boosting_tips">Boosting</string>
+    <string name="boosted_to_optimus_tips">Melhorada ao máximo!</string>
+    <string name="enable_super_boost_enable">Ativar</string>
+    <string name="enable_super_boost_title">Ativar Super Modo</string>
+    <string name="enable_super_boost_main_text">Para acelerar de forma mais efetiva, recomendamos que você ative as configurações de acessibilidade.</string>
+    <string name="enable_super_boost_content_text1" formatted="false">Para ajudar você a interromper completamente aplicativos desnecessários.</string>
+    <string name="enable_super_boost_content_text2" formatted="false">Reduzir consumo de bateria.</string>
+    <string name="enable_super_boost_content_text3" formatted="false">Mais de 85% ds usuários ativaram essa opção.</string>
+    <string name="boost_turn_on_boost_accessibility_service_tip">SERVIÇO Tap - Z Speed+</string>
+    <!-- =========boost_accessibility======== -->
+    <string name="boost_accessibility_service_description">Turn on the above button to activate Z Speed+ Power Mode for maximum acceleration!\n\nZ Speed+ use accessibility features to help stopping not-using apps. Please don\'t worry if you see the privacy risk reminder, that\'s just a regular informative warning for any accessibility service. 
+    \n\nWe promise NOT to collect ANY information.</string>
+
+    <!-- =========auto start======== -->
+    <string name="autostart_app_desr">Opções</string>
+    <string name="autostart_optimization_desr">Pode ser otimizado</string>
+    <string name="autostart_type_optimization">A ser otimizado</string>
+    <string name="autostart_type_allowed">Permitido</string>
+    <string name="autostart_type_blocked">Bloqueado</string>
+    <string name="autostart_type_system">Apps pré-instalados</string>
+    <string name="autostart_type_system_description">O bloqueio de apps pré-instalados pode causar instabilidade no sistema. Proceda com cautela</string>
+    <string name="autostart_preinstll_system">Apps pré-instalados</string>
+
+    <!-- ========= 白名单模块 ========= -->
+    <string name="ignore_list_act_title">Lista de ignorados</string>
+    <string name="add_to_ignore_list_act_title">Adicionar à lista de ignorados</string>
+    <string name="dialog_memory_footprint">Memória usada</string>
+    <string name="dialog_add_to_ignorelist">Adicionar à lista de ignorados</string>
+    <string name="dialog_remove_from_ignorelist">Remover da lista de ignorados</string>
+    <string name="tip_ignore_list_appunchecked">Estes apps serão desmarcados por padrão após a varredura.</string>
+    <string name="tip_ignore_list_appadd">Toque \'+\' para adicionar aplicativos ignorados.</string>
+
+    <!-- ========= 应用管理模块 ========= -->
+    <string name="app_manager">Gerenciador de apps</string>
+    <string name="app_manager_my_backups">Meus backups</string>
+    <string name="app_manager_others">Outros</string>
+    <string name="app_manager_back_up_success_tips">Backup de apps foram para:</string>
+    <string name="app_manager_back_up_success_tips_for_one">Backup de apps foram para:</string>
+    <string name="app_manager_back_up_fail_tips">apps falharam</string>
+    <string name="app_manager_back_up_fail_tips_for_one">app falhou</string>
+    <string name="app_manager_pre_installed_apps">Apps pré-instalados</string>
+    <string name="app_manager_backing_up">Fazendo backup</string>
+    <string name="app_manager_running">Rodando</string>
+    <string name="app_manager_stop">Parar</string>
+    <string name="app_manager_apps_running">Apps rodando</string>
+    <string name="app_manager_apps_desc">Desabilitar reduz o consumo. É completamente seguro</string>
+    <string name="app_manager_path">Local</string>
+    <string name="app_manager_no_backup_found">Nenhum backup encontrado</string>
+    <string name="app_manager_tap_to_disable">Toque em Desativar/Desligar para desabilitar</string>
+    <string name="app_manager_tap_to_enable">Toque em Ativar/Ligar para ativar</string>
+    <string name="app_manager_select_app_first">Favor selecionar o(s) app(s) primeiro</string>
+    <string name="app_manager_shit">OK</string>
+    <string name="app_manager_freed">Liberado</string>
+
+    <!-- ========= 清理加速模块 ========= -->
+    <string name="clean_main_act_title">Arquivos desnecessários</string>
+    <string name="clean_main_suggest">Sugeridos</string>
+    <string name="clean_main_selected">Selecionados</string>
+    <string name="clean_dialog_title">Precauções</string>
+    <string name="clean_dialog_message1">O arquivo que você selecionou tem os seguintes conteúdos:</string>
+    <string name="gallery_thumbnails">Miniaturas da galeria</string>
+    <string name="clean_gallery_thumbnails_dialog_tips">Depois de deletar, o carregamento da galeria ficará mais lento.</string>
+    <string name="clean_group_residue">Arquivos residuais</string>
+    <string name="clean_group_cache">Arquivos em cache</string>
+    <string name="clean_group_temp">Arquivos temporários do sistema</string>
+    <string name="clean_group_apk">Apks obsoletos</string>
+    <string name="clean_group_big_file">Arquivos grandes</string>
+    <string name="clean_done_tips">Limpo</string>
+
+    <!-- ========= 菜单界面 ============= -->
+    <string name="commontitle_setting_setting">Configurações</string>
+
+    <!-- ========= 菜单feedback =========== -->
+    <string name="title_feedback_setting">Feedback</string>
+    <string name="container_hint_setting_feedback">Favor escrever seus comentários aqui, fornecendo o máximo de detalhes que puder. Estamos sempre ouvindo e melhorando.</string>
+    <string name="mial_hint_setting_feedback">E-mail</string>
+    <string name="notice_setting_feedback">O modelo e a versão do smartphone serão coletados para diagnosticar o seu problema. Nós nunca coletaremos informações pessoais sem a sua permissão</string>
+    <string name="no_contain_setting_feedback">Olá, gostaria de dizer algo?</string>
+    <string name="sendok_setting_feedback">Obrigado por seu feedback!</string>
+    <string name="checknet_setting_feedback">Favor verificar sua conexão de rede.</string>
+
+    <!-- ========= 菜单about =========== -->
+    <string name="facebook_about_setting"><u>Curta no facebook</u></string>
+    <string name="googleplus_about_setting"><u>Junte-se a nós no Google+</u></string>
+    <string name="googleplay_about_setting"><u>Avalie no GooglePlay</u></string>
+    <string name="title_about_setting">Sobre</string>
+    <string name="share_setting_about">O Z Speed+ deixa o meu celular mais rápido e limpo. Experimente! Baixe aqui: http://goo.gl/q10oHl</string>
+    <string name="law_one_setting_about">©2014-2015 ZERO Team. All Rights Reserved.</string>
+    <string name="law_jump_setting_about"><u>Política de Privacidade</u></string>
+    <string name="share_title_setting_about">Compartilhe o Z Speed+</string>
+    <string name="http_facebook">https://www.facebook.com/pages/Z-Boost/318325038361225</string>
+    <string name="http_gplus">https://plus.google.com/b/112348125604156072635/communities/104671237601119272862</string>
+
+    <!-- ========= 菜单setting ========== -->
+    <string name="title_float_widget">Widget flutuante</string>
+    <string name="title_notice">Notificações</string>
+    <string name="enable_widget_setting_setting">Ativar</string>
+    <string name="hide_widget_setting_setting">Ocultar na barra de status</string>
+    <string name="show_widget_setting_setting">Mostrar somente no desktop</string>
+    <string name="memory_setting_setting">Melhoria de memória necessária</string>
+    <string name="storge_setting_setting">Espaço de armazenamento acabando</string>
+    <string name="junk_setting_setting">Arquivos desnecessários residuais</string>
+    <string name="autostart_setting_setting">Nova solicitação de autoinício</string>
+    <string name="ignore_setting_setting">Lista de ignorados</string>
+    <string name="memery_boost_setting_setting">Melhorar a memória</string>
+    <string name="law_setting_about_url">http://goappdl.goforandroid.com/soft/zboost/privacy/privacy_en.htm</string>
+
+    <!-- ========== 悬浮窗 ============= -->
+    <string name="float_close_float_message">Desabilitar o widget flutuante?</string>
+    <string name="float_hide_float_message">Você pode ocultar o widget flutuante na barra de status. Deseja tentar?</string>
+    <string name="float_dialog_ok">OK</string>
+    <string name="float_dialog_cancel">Cancelar</string>
+    <string name="float_dialog_hide_ok">Experimente!</string>
+    <string name="float_dialog_hide_cancel">Desabilitar mesmo assim</string>
+
+    <!-- ==Root 相关 -->
+    <string name="fail_to_Operation">Sem permissões. A operação falhou!</string>
+
+    <!-- ========== 通知栏 ============= -->
+    <string name="notification_ram">A memória disponível é menor que %s%%</string>
+    <string name="notification_boost">Melhorar</string>
+    <string name="notification_sdcard">Sua espaço está terminando. Toque para limpar!</string>
+
+</resources>

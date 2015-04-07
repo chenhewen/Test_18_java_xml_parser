@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 菲律宾 -->
+    <string name="app_name">Z Speed+</string>
+    <string name="hello_world">Hello mundo!</string>
+    <string name="action_settings">Mga Setting</string>
+
+    <!-- ==========字体模块========== -->
+    <string name="font_families_roboto">sans-serif</string>
+    <string name="font_families_roboto_thin">sans-serif-thin</string>
+    <string name="font_families_roboto_light">sans-serif-light</string>
+    <string name="font_families_roboto_condensed">sans-serif-condensed</string>
+
+    <!-- ========= 共用模块 ========= -->
+    <string name="common_yes">Oo</string>
+    <string name="common_no">Hindi</string>
+    <string name="common_ok">OK</string>
+    <string name="common_select">Piliin</string>
+    <string name="common_delete">I-delete</string>
+    <string name="common_others">Iba Pa</string>
+    <string name="common_stop">Tumigil</string>
+    <string name="common_uninstall">I-uninstall</string>
+    <string name="common_back_up">I-back Up</string>
+    <string name="common_cancel">Kanselahin</string>
+    <string name="common_install">I-install</string>
+    <string name="common_installed">Na-install</string>
+    <string name="common_vertion">Bersyon</string>
+    <string name="common_update">I-update</string>
+    <string name="common_insufficient_storate">Hindi Sapat Ang Storage Space</string>
+    <string name="common_no_sdcard">Hindi Makita Ang SDCard</string>
+
+    <!-- ========= 主界面 ========= -->
+    <string name="available">Magagamit</string>
+    <string name="main_ram_title">RAM</string>
+    <string name="main_storage_title">STORAGE</string>
+    <string name="main_button_boost">Memory Boost</string>
+    <string name="main_button_storage">Mga Junk File</string>
+    <string name="main_button_manage">App Manager</string>
+    <string name="main_ram_total">%s Kabuuan</string>
+    <string name="main_storage_total">%s Kabuuan</string>
+    <string name="tip_press_again_to_exit">Pindutin muli para mag-exit</string>
+
+    <!-- ========= 菜单 ========= -->
+    <string name="menu_setting">Mga Setting</string>
+    <string name="menu_refresh">I-update</string>
+    <string name="menu_feedback">Puna</string>
+    <string name="menu_about">Tungkol Sa</string>
+
+    <!-- ========= 内存加速模块 ========= -->
+
+    <string name="boost_main_act_title">Memory Boost</string>
+    <string name="boost_main_act_tab_running">Tumatakbo</string>
+    <string name="boost_main_act_tab_autostart">Autostart</string>
+    <string name="boost_running_apps_custom">Ang %1$d App(s) ay Napili</string>
+    <string name="boosting_memory_act_title">Memory Boost</string>
+    <string name="boosting_tips">Nagboo-boost</string>
+    <string name="boosting_power_tips">Pinapalakas Ang Power</string>
+    <string name="boosted_to_optimus_tips">Na-boost sa optimus na estado!</string>
+    <string name="boosted_active_power_mode_tips">Opps! %1$d Nagsimula uli ang app.\nI-activate ang PowerMode para ayusin ito!</string>
+    <string name="enable_super_boost_enable">Paganahin</string>
+    <string name="enable_super_boost_title">Paganahin Ang Super Mode</string>
+    <string name="enable_super_boost_main_text">Upang mas epektibong makapag-accelerate, inirerekomenda namin na i-turn on mo ang mga tampok ng Accessibility.</string>
+    <string name="enable_super_boost_content_text1" formatted="false">Upang matulungan kang pigilan ng ganap ang mga di kailangang app.</string>
+    <string name="enable_super_boost_content_text2" formatted="false">Bawasan ang gamit ng baterya.</string>
+    <string name="enable_super_boost_content_text3" formatted="false">Higit sa 85% ng mga user ay pinagana ang tampok na ito.</string>
+    <string name="boost_turn_on_boost_accessibility_service_tip">I-tap ang SERVICE - Z Speed+</string>
+    <!-- =========boost_accessibility======== -->
+    <string name="boost_accessibility_service_description">I-turn on ang nasa itaas na button upang mapagana ang Z Speed+ Power Mode para sa pinakamataas na acceleration!\n\nAng Z Speed+ ay gumagamit ng mga tampok ng accessibility upang tumulong sa pagpigil ng mga di-ginagamit na mga app. Mangyaring huwag mag-alala kung makita mo ang paalala sa privacy risk, iyan ay isang regular na babalang pang-impormasyon para sa anumang serbisyo ng accessibility. 
+    \n\nIpinapangako namin na HINDI kokolektahin ang ANUMANG impormasyon.</string>
+
+    <!-- =========auto start======== -->
+    <string name="autostart_app_desr">Mga Opsyon</string>
+    <string name="autostart_optimization_desr">Maaaring i-optimize</string>
+    <string name="autostart_type_optimization">I-o-optimize</string>
+    <string name="autostart_type_allowed">Pinapayagan</string>
+    <string name="autostart_type_blocked">Naka-block</string>
+    <string name="autostart_type_system">Mga Pre-installed na App</string>
+    <string name="autostart_type_system_description">Ang pag-block ng mga autostart ng mga pre-installed app ay maaaring magdulot ng system in-stablity. Magpatuloy ng maingat</string>
+    <string name="autostart_preinstll_system">Mga Pre-installed App</string> <!-- ========= 白名单模块 ========= -->
+    <string name="ignore_list_act_title">Balewalain Ang Listahan</string>
+    <string name="add_to_ignore_list_act_title">Idagdag sa Listahan ng Mga Babalewalain</string>
+    <string name="dialog_memory_footprint">Ang Memorya ay Nagamit</string>
+    <string name="dialog_add_to_ignorelist">Huwag pansinin</string>
+    <string name="dialog_remove_from_ignorelist">Tanggalin sa Listahan ng Mga Babalewalain</string>
+    <string name="tip_ignore_list_appunchecked">Ang mga app na ito ay tatanggalan ng check ng default matapos ang pag-scan.</string>
+    <string name="tip_ignore_list_appadd">I-tap \'+\' upang idagdag ang mga babalewalain na app.</string> <!-- ========= 应用管理模块 ========= -->
+     <!-- ========= 应用管理模块 ========= -->
+    <string name="app_manager">APP Manager</string>
+    <string name="app_manager_my_backups">Ang Aking Mga Backup</string>
+    <string name="app_manager_others">Iba Pa</string>
+    <string name="app_manager_back_up_success_tips">Ang mga app ay na-back up sa:</string>
+    <string name="app_manager_back_up_success_tips_for_one">ang app ay na-back up sa:</string>
+    <string name="app_manager_back_up_fail_tips">nabigo ang mga app</string>
+    <string name="app_manager_back_up_fail_tips_for_one">nabigo ang app</string>
+    <string name="app_manager_pre_installed_apps">Mga Pre-Installed na App</string>
+    <string name="app_manager_backing_up">Nagba-back Up</string>
+    <string name="app_manager_running">Tumatakbo</string>
+    <string name="app_manager_stop">Tumigil</string>
+    <string name="app_manager_apps_running">Tumatakbo ang mga app</string>
+    <string name="app_manager_apps_desc">Ang pag-disable ay nagbabawas sa pagkonsumo. Ito ay ganap na ligtas</string>
+    <string name="app_manager_path">Path</string>
+    <string name="app_manager_no_backup_found">Walang nakitang Backup</string>
+    <string name="app_manager_tap_to_disable">I-tap ang Disable/Turn off upang huwag paganahin</string>
+    <string name="app_manager_tap_to_enable">I-tap ang Enable/Turn on upang paganahin</string>
+    <string name="app_manager_select_app_first">Pakipili muna ng app</string>
+    <string name="app_manager_shit">OK</string>
+    <string name="app_manager_freed">Napakawalan</string>
+    <string name="app_manager_use_rare_month">Bihirang gamitin sa ilang buwan</string>
+    <string name="app_manager_use_rare_days">Bihirang gamitin sa %s mga araw</string>
+    <string name="app_manager_use_commonly">Karaniwang ginagamit</string>
+    <string name="app_manager_android_system">Android System</string>
+    <string name="app_manager_use_rare">Bihirang gamitin</string>
+    
+    <!-- wy -->
+    <string name="app_manager_tab_userapps">Mga User App</string>
+    <string name="app_manager_tab_system">Nakapre-install</string>
+    <string name="app_manager_tab_text_date">Petsa</string>
+    <string name="app_manager_tab_text_frequance">Dalas</string>
+    <string name="app_manager_tab_text_size">Laki</string>
+    <string name="app_manager_tab_text_battery">Baterya</string>
+    <string name="app_manager_tab_text_name">Pangalan</string>
+    <string name="app_manager_dialog_cancel">Kanselahin</string>
+    <string name="app_manager_dialog_backup">I-back Up</string>
+    <string name="app_manager_dialog_uninstall">I-uninstall</string>
+    <string name="app_manager_preinstall_noyice"><Data><![CDATA[&nbsp&nbsp&nbsp&nbsp<font color="#76B54B"> %s Tumatakbo ang mga app </font> Ang pag-disable ay nagpapababa sa consumption. Ito ay lubos na ligtas]]></Data></string>
+    <string name="app_manager_no_uerapp">Walang mga app</string>
+    
+    <!-- ========= 清理加速模块 ========= -->
+    <string name="clean_main_act_title">Mga Junk File</string>
+    <string name="clean_main_suggest">Iminungkahi</string>
+    <string name="clean_main_selected">Napili</string>
+    <string name="clean_dialog_title">Mga Babala</string>
+    <string name="clean_dialog_message1">Ang file na napili mo ay naglalaman ng mga sumusunod:</string>
+    <string name="gallery_thumbnails">Mga Thumbnail ng Gallery</string>
+    <string name="clean_gallery_thumbnails_dialog_tips">Matapos ang pag-delete ito ay mas babagal habang nag-lo-load sa gallery.</string>
+    <string name="clean_group_residue">Mga Residual File</string>
+    <string name="clean_group_cache">Mga Cache File</string>
+    <string name="clean_group_temp">Mga System Temp File</string>
+    <string name="clean_group_apk">Mga Obsolete na apk</string>
+    <string name="clean_group_big_file">Mga Malalaking File</string>
+    <string name="clean_done_tips">Nalinis</string>
+    
+    <string name="clean_dialog_app_cache_yes_btn">Manual na Paglinis</string>
+    <string name="clean_dialog_folder_yes_btn">Tignan</string>
+    <string name="clean_dialog_file_yes_btn">Buksan</string>
+    <string name="clean_dialog_media_yes_btn">I-play</string>
+    <string name="clean_dialog_message_size">Laki</string>
+    <string name="clean_dialog_message_contain">Naglalaman</string>
+    <string name="clean_dialog_message_path">Path</string>
+    <string name="clean_dialog_message_file">mga file</string>
+    <string name="clean_dialog_message_folder">mga folder</string>
+    <string name="clean_done_none_tips">Napakahusay</string>
+    
+    <!-- ========= 卸载弹窗界面 ============= -->
+    <string name="uninstall_dialog">Linisin</string>
+    <string name="uninstall_dialog_message_1">%1$s left &lt;font color="#85c443">%2$s&lt;/font>  residual na mga file.</string>
+    <string name="uninstall_dialog_message_2">Mga nilalaman:: </string>
+    <string name="uninstall_clean_tips">&#160;ang mga residual file ay nalinis!</string>
+    
+    <!-- ========= 菜单界面 ============= -->
+    <string name="commontitle_setting_setting">Mga Setting</string>
+    <!-- ========= 菜单feedback =========== -->
+    <string name="title_feedback_setting">Puna</string>
+    <string name="container_hint_setting_feedback">Pakisulat ng inyong mga komento dito, magbigay ng maraming detalye hangga \' t maaari. Kami ay palaging nakikinig at nagpapabuti.</string>
+    <string name="mial_hint_setting_feedback">Email</string>
+    <string name="notice_setting_feedback">Ang modelo ng telepono at bersyon ay kokolektahin para ma-diagnose ang iyong problema. Hindi kami kailanman kokolekta ng personal na impormasyon na wala ang pahintulot mo</string>
+    <string name="no_contain_setting_feedback">Hi,sabihin ang anuman?</string>
+    <string name="sendok_setting_feedback">Salamat sa iyong puna!</string>
+    <string name="checknet_setting_feedback">Pakicheck ng koneksyon ng iyong network.</string>
+    <!-- ========= 菜单about =========== -->
+    <string name="facebook_about_setting"><u>I-like kami sa Facebook</u></string>
+    <string name="googleplus_about_setting"><u>Sumali sa komunikasyon ng Google+</u></string>
+    <string name="googleplay_about_setting"><u>I-rate kami sa GooglePlay</u></string>
+    <string name="title_about_setting">Tungkol sa</string>
+    <string name="share_setting_about">Mas pinapabilis at pinapalinis ng Z Speed+ ang aking telepono. Subukan ito! Kunin ito sa: http://goo.gl/q10oHl</string>
+    <string name="law_one_setting_about">©2014-2015 ZERO Team. Ang Lahat ng Karapatan Ay Inirereserba.</string>
+    <string name="law_two_setting_about"></string>
+    <string name="law_jump_setting_about"><u>Patakaran sa Pribasiya</u></string>
+    <string name="share_title_setting_about">ibahagi ang Z Speed+</string>
+    <string name="http_facebook">https://www.facebook.com/pages/Z-Boost/318325038361225</string>
+    <string name="http_gplus">https://plus.google.com/b/112348125604156072635/communities/104671237601119272862</string>
+    <!-- ========= 菜单setting ========== -->
+    <string name="title_float_widget">Floating Widget</string>
+    <string name="title_notice">Notifications</string>
+    <string name="enable_widget_setting_setting">Paganahin</string>
+    <string name="hide_widget_setting_setting">Itago sa oras ng status bar</string>
+    <string name="show_widget_setting_setting">Ipakita lamang sa desktop</string>
+    <string name="memory_setting_setting">Ang Memory boost ay kailangan</string>
+    <string name="storge_setting_setting">Mauubos na ang storage space</string>
+    <string name="junk_setting_setting">Mga Residula junk file</string>
+    <string name="autostart_setting_setting">Bagong hiling na autostart</string>
+    <string name="ignore_setting_setting">Balewalain Ang Listahan</string>
+    <string name="memery_boost_setting_setting">Mga tumatakbong app</string>
+    <string name="law_setting_about_url">http://goappdl.goforandroid.com/soft/zboost/privacy/privacy_en.htm</string>
+    <!-- ========== 悬浮窗 ============= -->
+    <string name="float_close_float_message">Huwag paganahin ang floating widget?</string>
+    <string name="float_hide_float_message">Maaari mo ring itago ang floating widget a oras ng status bar.</string>
+    <string name="float_dialog_ok">OK</string>
+    <string name="float_dialog_cancel">Kanselahin</string>
+    <string name="float_dialog_hide_ok">Subukan ito!</string>
+    <string name="float_dialog_hide_cancel">Huwag pa ring paganahin</string>
+    <!-- ==Root 相关 -->
+    <string name="fail_to_Operation">Walang mga pahintulot. Bigo ang operasyon!</string>
+    <!-- ========== 通知栏 ============= -->
+    <string name="notification_ram">Ang magagamit na memorya ay mas mababa sa %s%%</string>
+    <string name="notification_boost">I-boost</string>
+    <string name="notification_sdcard">Mauubos na Ang Iyong Storage. I-tap upang Linisin!</string>
+    <string name="notification_release_more"><Data><![CDATA[%s MB Ang Nabakante. <font color="#85c443">Release More!</font>]]></Data></string>
+
+    <!-- 文件类型 -->
+    <string name="file_open_as">Buksan bilang</string>
+    <string name="filetype_text">Text</string>
+    <string name="filetype_video">Video</string>
+    <string name="filetype_audio">Audio</string>
+    <string name="filetype_image">Larawan</string>
+    
+    
+    <string name="menu_update">Update</string>
+    <string name="autostart_on_boot_up">I-boot up</string>
+    <string name="autostart_on_background">Background</string>
+    <string name="autostart_on_boot_up_and_background">I-boot up/Background</string>
+    <string name="autostart_detail_title">Mag-autostart sa %1$d na (mga) sitwasyon:</string>
+    <string name="update_notice">Bagong Bersyon</string>
+    <string name="update_update">I-update</string>
+    <string name="update_later">Mamaya</string>
+    <string name="update_cancel">Kanselahin</string>  
+    <string name="shortcut_boost">I-boost</string>
+	<string name="auto_start_on_boot">Pagkatapos mag-startup</string>
+	<string name="auto_start_on_connectivity_change">Kapag nagpapalit ng mga network</string>
+	<string name="auto_start_on_package_changed">Kapag nagbago ang katayuan ng app</string>
+	<string name="auto_start_on_package_added">Kapag nag-install ng mga app</string>
+	<string name="auto_start_on_package_removed">Kapag nag-uninstall ng mga app</string>
+	<string name="auto_start_on_package_replaced">Kapag nagpapalit ng mga app</string>
+	<string name="auto_start_on_any_data_state">Kapag binago ang data</string>
+	<string name="auto_start_on_outgoing_call">Sa panahon ng mga outgoing call</string>
+	<string name="auto_start_on_phone_state_changed">Kapag nagha-hang up</string>
+	<string name="auto_start_on_user_present">kapag ina-unlock</string>
+	<string name="auto_start_on_wifi_state_change">Kapag kumokonekta sa Wi-Fi</string>
+	<string name="auto_start_on_wifi_enable_change">Kapag i-on/i-off ang Wi-Fi</string>
+	<string name="auto_start_on_time_set">Kapag ang oras ay nai-set</string>
+	<string name="auto_start_on_bluetooth_state_change">Kapag nagbago ang estado ng Bluetooth</string>
+	<string name="auto_start_on_power_connected">Kapag kinakabit ang power cable</string>
+	<string name="auto_start_on_power_disconnected">Kapag tinatanggal ang power cable</string>
+    
+</resources>

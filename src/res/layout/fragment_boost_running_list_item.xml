@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_item_height" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/boost_running_list_item_icon"
+            android:layout_width="@dimen/common_icon_width"
+            android:layout_height="@dimen/common_icon_width"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:contentDescription="@null"
+            android:scaleType="centerInside" />
+
+        <com.gto.zero.zboost.common.ui.Space
+            android:id="@+id/space"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:minWidth="24dp" />
+
+        <LinearLayout
+            android:id="@+id/boost_running_list_item_ram_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:layout_toLeftOf="@id/space"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/boost_running_list_item_ram_size"
+                style="@style/common_file_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:text="128"
+                android:textColor="#FF777777"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/boost_running_list_item_ram_unit"
+                style="@style/common_file_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:fontFamily="@string/font_families_roboto_light"
+                android:text="MB"
+                android:textColor="#FFBEBEBE"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@id/boost_running_list_item_ram_layout"
+            android:layout_toRightOf="@id/boost_running_list_item_icon"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/boost_running_list_item_app_name"
+                style="@style/common_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="#FF777777"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/boost_running_list_item_app_caption"
+                style="@style/common_item_info_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="#FFBEBEBE"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/boost_running_list_item_foreground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00FFFFFF" />
+    </RelativeLayout>
+
+    <CheckBox
+        android:id="@+id/boost_running_list_item_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="#00000000"
+        android:button="@drawable/app_item_checkbox_red_checkbox"
+        android:checked="true"
+        android:gravity="center"
+        android:minWidth="40dp"
+        android:paddingRight="16dp" />
+
+</FrameLayout>

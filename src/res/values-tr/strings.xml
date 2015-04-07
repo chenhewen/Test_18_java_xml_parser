@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Z Speed+</string>
+    <string name="action_settings">Ayarlar</string>
+
+    <!-- ==========字体模块========== -->
+    <string name="font_families_roboto">sans-serif</string>
+    <string name="font_families_roboto_thin">sans-serif-thin</string>
+    <string name="font_families_roboto_light">sans-serif-light</string>
+    <string name="font_families_roboto_condensed">sans-serif-condensed</string>
+
+    <!-- ========= 共用模块 ========= -->
+    <string name="common_yes">Evet</string>
+    <string name="common_no">Hayır</string>
+    <string name="common_ok">TAMAM</string>
+    <string name="common_select">Seç</string>
+    <string name="common_delete">Sil</string>
+    <string name="common_others">Diğerleri</string>
+    <string name="common_stop">Dur</string>
+    <string name="common_uninstall">Kurulumu Kaldır</string>
+    <string name="common_back_up">Yedekle</string>
+    <string name="common_cancel">Vazgeç</string>
+    <string name="common_install">Kur</string>
+    <string name="common_installed">Kuruldu</string>
+    <string name="common_vertion">Sürüm</string>
+    <string name="common_update">Güncelle</string>
+    <string name="common_insufficient_storate">Yetersiz Depolama Alanı</string>
+    <string name="common_no_sdcard">SDCard Bulunamadı</string>
+
+    <!-- ========= 主界面 ========= -->
+    <string name="available">Mevcut</string>
+    <string name="main_button_boost">Hafıza Yükseltimi</string>
+    <string name="main_button_storage">İstenmeyen Dosyalar</string>
+    <string name="main_button_manage">Uygulama Yöneticisi</string>
+    <string name="main_ram_total">Toplam %s</string>
+    <string name="main_storage_total">Toplam %s</string>
+    <string name="tip_press_again_to_exit">Çıkmak için tekrar basın.</string>
+
+    <!-- ========= 菜单 ========= -->
+    <string name="menu_setting">Ayarlar</string>
+    <string name="menu_refresh">Güncelle</string>
+    <string name="menu_feedback">Geri Bildirim</string>
+    <string name="menu_about">Hakkında</string>
+
+    <!-- ========= 内存加速模块 ========= -->
+
+    <string name="boost_main_act_title">Hafıza Arttırma</string>
+    <string name="boost_main_act_tab_running">Çalışıyor</string>
+    <string name="boost_main_act_tab_autostart">Otomatik Başlama</string>
+    <string name="boost_running_apps_custom">%1$d Uygulama Seçili</string>
+    <string name="boosting_memory_act_title">Hafızayı Arttırma</string>
+    <string name="boosting_tips">Boosting</string>
+    <string name="boosted_to_optimus_tips">Optimal duruma arttırıldı!</string>
+    <string name="enable_super_boost_enable">Etkinleştir</string>
+    <string name="enable_super_boost_title">Süper Modu Etkinleştir</string>
+    <string name="enable_super_boost_main_text">Daha etkili hızlandırma için, Erişilebilirlik özelliklerini açmanızı tavsiye ediyoruz.</string>
+    <string name="enable_super_boost_content_text1" formatted="false">Gereksiz uygulamaları tamamen durdurmanıza yardım etmek için.</string>
+    <string name="enable_super_boost_content_text2" formatted="false">Pil tüketiini azaltın.</string>
+    <string name="enable_super_boost_content_text3" formatted="false">Kullanıcıların %85\'inden fazlası bu özelliği etkinleştirdi.</string>
+    <string name="boost_turn_on_boost_accessibility_service_tip">SERVİS - Z Speed+\'a Dokunun</string>
+    <!-- =========boost_accessibility======== -->
+    <string name="boost_accessibility_service_description">Turn on the above button to activate Z Speed+ Power Mode for maximum acceleration!\n\nZ Speed+ use accessibility features to help stopping not-using apps. Please don\'t worry if you see the privacy risk reminder, that\'s just a regular informative warning for any accessibility service. 
+    \n\nWe promise NOT to collect ANY information.</string>
+
+    <!-- =========auto start======== -->
+    <string name="autostart_app_desr">Seçenekler</string>
+    <string name="autostart_optimization_desr">En iyi hale getirilebilir</string>
+    <string name="autostart_type_optimization">En iyi hale getirilecek</string>
+    <string name="autostart_type_allowed">İzin Verildi</string>
+    <string name="autostart_type_blocked">Engellendi</string>
+    <string name="autostart_type_system">Önceden Kurulmuş Uygulamalar</string>
+    <string name="autostart_type_system_description">Önceden kurulmuş uygulamaların otomatik başlamasını engellemek, sistem kararsızlığına neden olabilir. İşlemi dikkatle yapın</string>
+    <string name="autostart_preinstll_system">Önceden Kurulmuş Uygulamalar</string>
+
+    <!-- ========= 白名单模块 ========= -->
+    <string name="ignore_list_act_title">Gözardı Edilen Listesi</string>
+    <string name="add_to_ignore_list_act_title">Gözardı Edilen Listesine Ekle</string>
+    <string name="dialog_memory_footprint">Kullanılan Hafıza</string>
+    <string name="dialog_add_to_ignorelist">Gözardı Edilen Listesine Ekle</string>
+    <string name="dialog_remove_from_ignorelist">Gözardı Edilen Listesinden Sil</string>
+    <string name="tip_ignore_list_appunchecked">Bu uygulamalar taramadan sonra varsayılan olarak kontrol edilmeyecektir.</string>
+    <string name="tip_ignore_list_appadd">Gözardı edilen uygulamalara eklemek için \'+\' şekline dokunun.</string>
+
+    <!-- ========= 应用管理模块 ========= -->
+    <string name="app_manager">UYGULAMA Yöneticisi</string>
+    <string name="app_manager_my_backups">Yedeklemelerim</string>
+    <string name="app_manager_others">Diğerleri</string>
+    <string name="app_manager_back_up_success_tips">uygulamalar şuraya yedeklendi:</string>
+    <string name="app_manager_back_up_success_tips_for_one">uygulama şuraya yedeklendi:</string>
+    <string name="app_manager_back_up_fail_tips">uygulamalar başarısız oldu</string>
+    <string name="app_manager_back_up_fail_tips_for_one">uygulama başarısız oldu</string>
+    <string name="app_manager_pre_installed_apps">Önceden Kurulmuş Uygulamalar</string>
+    <string name="app_manager_backing_up">Yedekleniyor</string>
+    <string name="app_manager_running">Çalışıyor</string>
+    <string name="app_manager_stop">Durdur</string>
+    <string name="app_manager_apps_running">Çalışan uygulamalar</string>
+    <string name="app_manager_apps_desc">Pasifleştirmek tüketimi azaltır. Bu, tamamen güvenlidir.</string>
+    <string name="app_manager_path">Kısa Yol</string>
+    <string name="app_manager_no_backup_found">Yedekleme Bulunamadı</string>
+    <string name="app_manager_tap_to_disable">Pasifleştirmek için Pasifleştir/Kapat\'a dokunun</string>
+    <string name="app_manager_tap_to_enable">Etkinleştirmek için Etkinleştir/Aç\'a dokunun</string>
+    <string name="app_manager_select_app_first">Lütfen ilk olarak uygulamaları seçin</string>
+    <string name="app_manager_shit">TAMAM</string>
+    <string name="app_manager_freed">Arttırıldı</string>
+
+    <!-- ========= 清理加速模块 ========= -->
+    <string name="clean_main_act_title">İstenmeyen Dosyalar</string>
+    <string name="clean_main_suggest">Önerilen</string>
+    <string name="clean_main_selected">Seçilen</string>
+    <string name="clean_dialog_title">Uyarılar</string>
+    <string name="clean_dialog_message1">Seçtiğiniz dosya aşağıdaki içeriği içeriyor:</string>
+    <string name="gallery_thumbnails">Galeri Öngörünümleri</string>
+    <string name="clean_gallery_thumbnails_dialog_tips">Silindikten sonra, galeriye yükleme yavaş olabilir.</string>
+    <string name="clean_group_residue">Arda Kalan Dosyalar</string>
+    <string name="clean_group_cache">Önbellek Dosyaları</string>
+    <string name="clean_group_temp">Sistem Geçici Dosyaları</string>
+    <string name="clean_group_apk">Kullanılmaz Hale gelen APK\'lar</string>
+    <string name="clean_group_big_file">Büyük Dosyalar</string>
+    <string name="clean_done_tips">Temizlendi</string>
+
+    <!-- ========= 菜单界面 ============= -->
+    <string name="commontitle_setting_setting">Ayarlar</string>
+
+    <!-- ========= 菜单feedback =========== -->
+    <string name="title_feedback_setting">Geri Bildirim</string>
+    <string name="container_hint_setting_feedback">Lütfen yorumlarınızı buraya yazın, olabildiğince çok detayı bize sunun. Size her zaman kulak verip kendimizi geliştiriyoruz.</string>
+    <string name="mial_hint_setting_feedback">E-posta</string>
+    <string name="notice_setting_feedback">Sorununuzu tanılamak için telefonun modeli ve sürümü bilgisi de alınacaktır. Asla kişisel bilgilerinizi izniniz olmadan almayız</string>
+    <string name="no_contain_setting_feedback">Selam, birşeyler söyleyecek misin?</string>
+    <string name="sendok_setting_feedback">Geri bildiriminiz için teşekkür ederz !</string>
+    <string name="checknet_setting_feedback">Lütfen ağ bağlantınızı kontrol edin.</string>
+
+    <!-- ========= 菜单about =========== -->
+    <string name="facebook_about_setting"><u>Bizi Facebook\'ta beğenin</u></string>
+    <string name="googleplus_about_setting"><u>Google+ iletişimine katılın</u></string>
+    <string name="googleplay_about_setting"><u>Bize GooglePlay\'de puan verin</u></string>
+    <string name="title_about_setting">Hakkında</string>
+    <string name="share_setting_about">Z Speed+, telefonumu daha hızlı ve daha temiz yaptı. Bi bakın deneyin derim! Şuradan edinebilirsiniz: http://goo.gl/q10oHl</string>
+    <string name="law_one_setting_about">©2014-2015 ZERO Team. All Rights Reserved.</string>
+    <string name="law_jump_setting_about"><u>Gizlilik Politikası</u></string>
+    <string name="share_title_setting_about">Z Speed+\'u paylaş</string>
+    <string name="http_facebook">https://www.facebook.com/pages/Z-Boost/318325038361225</string>
+    <string name="http_gplus">https://plus.google.com/b/112348125604156072635/communities/104671237601119272862</string>
+
+    <!-- ========= 菜单setting ========== -->
+    <string name="title_float_widget">Yüzen Parçacık</string>
+    <string name="title_notice">Bildirimler</string>
+    <string name="enable_widget_setting_setting">Etkinleştir</string>
+    <string name="hide_widget_setting_setting">Durum çubuğundaki zamana gizle</string>
+    <string name="show_widget_setting_setting">Sadece masaüstünde göster</string>
+    <string name="memory_setting_setting">Hafıza arttırımı gerekmektedir.</string>
+    <string name="storge_setting_setting">Depolama alanı tükeniyor</string>
+    <string name="junk_setting_setting">Arda Kalan İstenmeyen Dosyalar</string>
+    <string name="autostart_setting_setting">Yeni otomatik başlama talebi</string>
+    <string name="ignore_setting_setting">Gözardı Edilen Listesi</string>
+    <string name="memery_boost_setting_setting">Hafıza arttırımı</string>
+    <string name="law_setting_about_url">http://goappdl.goforandroid.com/soft/zboost/privacy/privacy_en.htm</string>
+
+    <!-- ========== 悬浮窗 ============= -->
+    <string name="float_close_float_message">Yüzen parçacık pasifleştirilsin mi?</string>
+    <string name="float_hide_float_message">Yüzen parçacığı durum çubuğunun zaman kısmında saklayabilirsiniz. Denemek ister misiniz?</string>
+    <string name="float_dialog_ok">TAMAM</string>
+    <string name="float_dialog_cancel">Vazgeç</string>
+    <string name="float_dialog_hide_ok">Bi deneyin!</string>
+    <string name="float_dialog_hide_cancel">Yine de pasifleştir</string>
+
+    <!-- ==Root 相关 -->
+    <string name="fail_to_Operation">Hiç izin yok. İşlem başarısız oldu!</string>
+
+    <!-- ========== 通知栏 ============= -->
+    <string name="notification_ram">Mevcut hafıza %%%s\'dan az</string>
+    <string name="notification_boost">Arttır</string>
+    <string name="notification_sdcard">Belleğiniz Tükeniyor. Temizlemek için Dokunun!</string>
+
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 一键加速 -->
+    <dimen name="shortcut_boost_padding_left">0dp</dimen>
+    <dimen name="shortcut_boost_padding_top">5dp</dimen>
+
+</resources>

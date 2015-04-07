@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Z Speed+</string>
+    <string name="action_settings">Настройки</string>
+
+    <!-- ==========字体模块========== -->
+    <string name="font_families_roboto">sans-serif</string>
+    <string name="font_families_roboto_thin">sans-serif-thin</string>
+    <string name="font_families_roboto_light">sans-serif-light</string>
+    <string name="font_families_roboto_condensed">sans-serif-condensed</string>
+
+    <!-- ========= 共用模块 ========= -->
+    <string name="common_yes">Да</string>
+    <string name="common_no">Нет</string>
+    <string name="common_ok">ОК</string>
+    <string name="common_select">Выбрать</string>
+    <string name="common_delete">Удалить</string>
+    <string name="common_others">Другое</string>
+    <string name="common_stop">Остановить</string>
+    <string name="common_uninstall">Стереть</string>
+    <string name="common_back_up">Резервная копия</string>
+    <string name="common_cancel">Отменить</string>
+    <string name="common_install">Установить</string>
+    <string name="common_installed">Установлено</string>
+    <string name="common_vertion">Версия</string>
+    <string name="common_update">Обновление</string>
+    <string name="common_insufficient_storate">Недостаточно места</string>
+    <string name="common_no_sdcard">Карта памяти не обнаружена</string>
+
+    <!-- ========= 主界面 ========= -->
+    <string name="available">Доступно</string>
+    <string name="main_button_boost">Улучшение памяти</string>
+    <string name="main_button_storage">Ненужные файлы</string>
+    <string name="main_button_manage">Управление приложениями</string>
+    <string name="main_ram_total">%s всего</string>
+    <string name="main_storage_total">%s всего</string>
+    <string name="tip_press_again_to_exit">Нажмите еще раз для выхода</string>
+
+    <!-- ========= 菜单 ========= -->
+    <string name="menu_setting">Настройки</string>
+    <string name="menu_refresh">Обновление</string>
+    <string name="menu_feedback">Отзыв</string>
+    <string name="menu_about">О приложении</string>
+
+    <!-- ========= 内存加速模块 ========= -->
+
+    <string name="boost_main_act_title">Улучшение памяти</string>
+    <string name="boost_main_act_tab_running">В процессе</string>
+    <string name="boost_main_act_tab_autostart">Автозапуск</string>
+    <string name="boost_running_apps_custom">%1$d приложение(я) выбраны</string>
+    <string name="boosting_memory_act_title">Улучшение памяти</string>
+    <string name="boosting_tips">ускорять</string>
+    <string name="boosted_to_optimus_tips">Улучшена до оптимального статуса!</string>
+    <string name="enable_super_boost_enable">Включить</string>
+    <string name="enable_super_boost_title">Включить Супер Режим</string>
+    <string name="enable_super_boost_main_text">Чтобы ускоряться более эффективно, рекомендуем подключить настройки доступа</string>
+    <string name="enable_super_boost_content_text1" formatted="false">Чтобы ненужные приложения полностью отключились</string>
+    <string name="enable_super_boost_content_text2" formatted="false">Уменьшить расход батареи</string>
+    <string name="enable_super_boost_content_text3" formatted="false">Более 85% пользователей используют эту функцию</string>
+    <string name="boost_turn_on_boost_accessibility_service_tip">Нажмите SERVICE - Z Speed+</string>
+    <!-- =========boost_accessibility======== -->
+    <string name="boost_accessibility_service_description">Уключыце вышэйпаказанай кнопкі для актывацыі Z Speed+ рэжыме супер максімальным паскарэннем!\n\nZ Speed+ Павышэння выкарыстанне спецыяльныя магчымасці, каб дапамагчы спыніць не выкарыстоўваюць прыкладання. Калі ласка, не хвалюйцеся, калі вы бачыце напамін рызыкі недатыкальнасць прыватнага жыцця, вось толькі рэгулярныя інфармацыйныя папярэджання для любой службы даступнасці. \n\nМы абяцаем не збіраць любую інфармацыю.</string>
+
+    <!-- =========auto start======== -->
+    <string name="autostart_app_desr">Настройки</string>
+    <string name="autostart_optimization_desr">Может быть оптимизировано</string>
+    <string name="autostart_type_optimization">Оптимизировать</string>
+    <string name="autostart_type_allowed">Разрешен</string>
+    <string name="autostart_type_blocked">Заблокирован</string>
+    <string name="autostart_type_system">Ранее установленные приложения</string>
+    <string name="autostart_type_system_description">Блокировка ранее установленных приложений может вызвать нестабильность системы. Будьте осторожны </string>
+    <string name="autostart_preinstll_system">Ранее установленные приложения</string>
+
+    <!-- ========= 白名单模块 ========= -->
+    <string name="ignore_list_act_title">Черный список</string>
+    <string name="add_to_ignore_list_act_title">Добавить в черный список</string>
+    <string name="dialog_memory_footprint">Используемая память</string>
+    <string name="dialog_add_to_ignorelist">Добавить в черный список</string>
+    <string name="dialog_remove_from_ignorelist">Удалить из черного списка</string>
+    <string name="tip_ignore_list_appunchecked">Эти приложения будут проверены по умолчанию после сканирования.</string>
+    <string name="tip_ignore_list_appadd">Нажмите \'+\' , чтобы добавить игнорируемые приложения.</string>
+
+    <!-- ========= 应用管理模块 ========= -->
+    <string name="app_manager">Управление приложениями</string>
+    <string name="app_manager_my_backups">Мои копии</string>
+    <string name="app_manager_others">Другое</string>
+    <string name="app_manager_back_up_success_tips">приложения были скопированы в: </string>
+    <string name="app_manager_back_up_success_tips_for_one">app has been backed up to:</string>
+    <string name="app_manager_back_up_fail_tips">приложения не отвечают</string>
+    <string name="app_manager_back_up_fail_tips_for_one">приложения не отвечают</string>
+    <string name="app_manager_pre_installed_apps">Ранее установленные приложения</string>
+    <string name="app_manager_backing_up">Резервная копия</string>
+    <string name="app_manager_running">В процессе</string>
+    <string name="app_manager_stop">Остановить</string>
+    <string name="app_manager_apps_running">Работающие приложения</string>
+    <string name="app_manager_apps_desc">Выключение уменьшает расход. Это абсолютно безопасно.</string>
+    <string name="app_manager_path">Путь</string>
+    <string name="app_manager_no_backup_found">Резервная копия не обнаружена</string>
+    <string name="app_manager_tap_to_disable">Нажмите Отключить/Выкл., чтобы отключить</string>
+    <string name="app_manager_tap_to_enable">Нажмите Подключить/Вкл., чтобы подключить</string>
+    <string name="app_manager_select_app_first">Пожалуйста, сначала выберите приложения</string>
+    <string name="app_manager_shit">OK</string>
+    <string name="app_manager_freed">Свободно</string>
+
+    <!-- ========= 清理加速模块 ========= -->
+    <string name="clean_main_act_title">Ненужные файлы</string>
+    <string name="clean_main_suggest">Рекомендуется</string>
+    <string name="clean_main_selected">Выбрано</string>
+    <string name="clean_dialog_title">Предупреждения</string>
+    <string name="clean_dialog_message1">Выбранный файл содержит следующее: </string>
+    <string name="gallery_thumbnails">Галерея аватаров</string>
+    <string name="clean_gallery_thumbnails_dialog_tips">После удаления загрузка галереи будет медленнее</string>
+    <string name="clean_group_residue">Оставшиеся файлы</string>
+    <string name="clean_group_cache">Кэш-файлы</string>
+    <string name="clean_group_temp">Временные файлы</string>
+    <string name="clean_group_apk">Устаревшие приложения</string>
+    <string name="clean_group_big_file">Большие файлы</string>
+    <string name="clean_done_tips">Очищено</string>
+
+    <!-- ========= 菜单界面 ============= -->
+    <string name="commontitle_setting_setting">Настройки</string>
+
+    <!-- ========= 菜单feedback =========== -->
+    <string name="title_feedback_setting">Обратная связь</string>
+    <string name="container_hint_setting_feedback">Пожалуйста, оставьте ваши  подробные комментарии ниже. Мы всегда прислушиваемся к ним и развиваемся.</string>
+    <string name="mial_hint_setting_feedback">Email</string>
+    <string name="notice_setting_feedback">Модель и версия телефона будут запрошены для определения вашей проблемы. Мы никогда не собираем личные данные без вашего разрешения</string>
+    <string name="no_contain_setting_feedback">Привет, хочешь что-то сказать?</string>
+    <string name="sendok_setting_feedback">Спасибо за отзыв!</string>
+    <string name="checknet_setting_feedback">Пожалуйста, проверьте ваше интернет-соединение </string>
+
+    <!-- ========= 菜单about =========== -->
+    <string name="facebook_about_setting"><u>Поставить лайк на Facebook</u></string>
+    <string name="googleplus_about_setting"><u>Начать общение в  Google+ </u></string>
+    <string name="googleplay_about_setting"><u>Оцените нас в GooglePlay</u></string>
+    <string name="title_about_setting">О приложении</string>
+    <string name="share_setting_about">Z Speed+ ускоряет и улучшает работу моего телефона. Попробуй и ты! Скачать: http://goo.gl/q10oHl</string>
+    <string name="law_one_setting_about">©2014-2015 ZERO Team. All Rights Reserved.</string>
+    <string name="law_jump_setting_about"><u>Политика конфиденциальности</u></string>
+    <string name="share_title_setting_about">поделиться Z Speed+</string>
+    <string name="http_facebook">https://www.facebook.com/pages/Z-Boost/318325038361225</string>
+    <string name="http_gplus">https://plus.google.com/b/112348125604156072635/communities/104671237601119272862</string>
+
+    <!-- ========= 菜单setting ========== -->
+    <string name="title_float_widget">Плавающий виджет</string>
+    <string name="title_notice">Уведомления</string>
+    <string name="enable_widget_setting_setting">Подключить</string>
+    <string name="hide_widget_setting_setting">Спрятать в строку статуса</string>
+    <string name="show_widget_setting_setting">Показывать только рабочий стол</string>
+    <string name="memory_setting_setting">Необходимо улучшение памяти</string>
+    <string name="storge_setting_setting">Осталось мало места</string>
+    <string name="junk_setting_setting">Оставшиеся ненужные файлы</string>
+    <string name="autostart_setting_setting">Новый запрос автозапуска</string>
+    <string name="ignore_setting_setting">Черный список</string>
+    <string name="memery_boost_setting_setting">Улучшение памяти</string>
+    <string name="law_setting_about_url">http://goappdl.goforandroid.com/soft/zboost/privacy/privacy_en.htm</string>
+
+    <!-- ========== 悬浮窗 ============= -->
+    <string name="float_close_float_message">Отключить плавающий виджет?</string>
+    <string name="float_hide_float_message">Вы можете спрятать плавающий виджет в панель статуса. Хотите попробовать? </string>
+    <string name="float_dialog_ok">ОК</string>
+    <string name="float_dialog_cancel">Отменить</string>
+    <string name="float_dialog_hide_ok">Попробуйте!</string>
+    <string name="float_dialog_hide_cancel">Все равно отключить</string>
+
+    <!-- ==Root 相关 -->
+    <string name="fail_to_Operation">Нет разрешения. Операция неуспешна!</string>
+
+    <!-- ========== 通知栏 ============= -->
+    <string name="notification_ram">Свободно менее %s%% памяти</string>
+    <string name="notification_boost">Улучшить</string>
+    <string name="notification_sdcard">Осталось мало места. Нажмите, чтобы очистить!</string>
+
+</resources>

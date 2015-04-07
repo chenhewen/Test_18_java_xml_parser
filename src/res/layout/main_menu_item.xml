@@ -1,0 +1,12 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/main_menu_item_height"
+    android:background="@drawable/menu_item_selector"
+    android:fontFamily="@string/font_families_roboto"
+    android:gravity="center_vertical"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:singleLine="true"
+    android:textColor="#FF868686"
+    android:textSize="17sp"
+    android:textStyle="normal" />

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/uninstall_dialog_bg"
+        android:minHeight="@dimen/uninstall_dialog_height" >
+
+        <RelativeLayout
+            android:id="@+id/uninstall_dialog_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/uninstall_dialog_common_padding"
+            android:layout_marginRight="@dimen/uninstall_dialog_common_padding"
+            android:layout_marginTop="16dp" >
+
+            <ImageView
+                android:id="@+id/uninstall_dialog_icon"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher" />
+
+            <TextView
+                android:id="@+id/uninstall_dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/uninstall_dialog_icon"
+                android:fontFamily="@string/font_families_roboto"
+                android:text="@string/app_name"
+                android:textColor="@color/menu_setting_title"
+                android:textSize="19dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/uninstall_dialog_message1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/uninstall_dialog_title_layout"
+            android:layout_marginLeft="@dimen/uninstall_dialog_common_padding"
+            android:layout_marginRight="@dimen/uninstall_dialog_common_padding"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@string/font_families_roboto"
+            android:gravity="center_vertical"
+            android:minHeight="34dp"
+            android:text="@string/uninstall_dialog_message_1"
+            android:textColor="@color/menu_setting_ok"
+            android:textSize="15dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/uninstall_dialog_message1"
+            android:layout_marginTop="21dp" >
+
+            <TextView
+                android:id="@+id/uninstall_dialog_message2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/uninstall_dialog_common_padding"
+                android:layout_marginRight="@dimen/uninstall_dialog_common_padding"
+                android:fontFamily="@string/font_families_roboto"
+                android:text="@string/uninstall_dialog_message_2"
+                android:textColor="@color/menu_setting_title"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/uninstall_dialog_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/uninstall_dialog_message2"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/common_dialog_btn_selector"
+                android:clickable="true"
+                android:fontFamily="@string/font_families_roboto"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/uninstall_dialog_common_padding"
+                android:paddingRight="@dimen/uninstall_dialog_common_padding"
+                android:text="@string/uninstall_dialog"
+                android:textColor="@color/menu_setting_title"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/uninstall_dialog_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_below="@id/uninstall_dialog_message2"
+                android:layout_marginTop="12dp"
+                android:layout_toLeftOf="@id/uninstall_dialog_confirm"
+                android:background="@drawable/common_dialog_btn_selector"
+                android:clickable="true"
+                android:fontFamily="@string/font_families_roboto"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/uninstall_dialog_common_padding"
+                android:paddingRight="@dimen/uninstall_dialog_common_padding"
+                android:text="@string/common_cancel"
+                android:textColor="@color/menu_setting_ok"
+                android:textSize="15dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

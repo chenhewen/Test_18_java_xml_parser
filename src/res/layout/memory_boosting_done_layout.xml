@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false" >
+
+    <include
+        android:id="@+id/memory_boosting_done_button_ok_layout"
+        android:layout_width="@dimen/common_round_button_layout_width"
+        android:layout_height="108dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        layout="@layout/common_round_button_white_layout" />
+
+    <com.gto.zero.zboost.function.boost.ui.SkewTextView
+        android:id="@+id/memory_boosting_done_active_power_mode_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/memory_boosting_done_button_ok_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="26dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxWidth="240dp"
+        android:fontFamily="@string/font_families_roboto"
+        android:maxLines="4"
+        android:paddingBottom="6dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="6dp"
+        android:textColor="@color/active_power_mode_tips_text_selector"
+        android:textSize="15dp"
+        android:textStyle="normal" />
+
+</RelativeLayout>

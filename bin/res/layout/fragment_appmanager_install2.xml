@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_appmanager_install"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/appmanager_operation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_module_item_height"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#d4d2d2" />
+
+        <TextView
+            android:id="@+id/back_up"
+            style="@style/common_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/divider"
+            android:background="@drawable/common_list_item_white_selector"
+            android:gravity="center"
+            android:text="@string/common_back_up" />
+
+        <TextView
+            android:id="@+id/divider"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#aaaaaaaa"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/uninstall"
+            style="@style/common_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/divider"
+            android:background="@drawable/common_list_item_white_selector"
+            android:gravity="center"
+            android:text="@string/common_uninstall"
+            android:textColor="@color/common_red_normal" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/appmanager_operation_layout"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/fragment_appmanager_userinstall_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/user_app_tab_heght"
+            android:layout_marginTop="@dimen/common_title_height"
+            android:background="#FFFFFFFF"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/user_apps_date"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/appmanager_user_tab_click_selector"
+                android:fontFamily="@string/font_families_roboto"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/app_manager_tab_text_date"
+                android:textColor="@color/appmanager_user_tab_textcolor_selector"
+                android:textSize="@dimen/common_fire_unit" />
+
+            <TextView
+                android:id="@+id/user_apps_frequance"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/appmanager_user_tab_click_selector"
+                android:fontFamily="@string/font_families_roboto"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/app_manager_tab_text_frequance"
+                android:textColor="@color/appmanager_user_tab_textcolor_selector"
+                android:textSize="@dimen/common_fire_unit" />
+
+            <TextView
+                android:id="@+id/user_apps_size"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/appmanager_user_tab_click_selector"
+                android:fontFamily="@string/font_families_roboto"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/app_manager_tab_text_size"
+                android:textColor="@color/appmanager_user_tab_textcolor_selector"
+                android:textSize="@dimen/common_fire_unit" />
+
+            <TextView
+                android:id="@+id/user_apps_battery"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/appmanager_user_tab_click_selector"
+                android:fontFamily="@string/font_families_roboto"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/app_manager_tab_text_battery"
+                android:textColor="@color/appmanager_user_tab_textcolor_selector"
+                android:textSize="@dimen/common_fire_unit" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/container_userinstall_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+            
+            <TextView 
+                android:id="@+id/appmanager_no_userapp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                style="@style/common_file_size"
+                android:text="@string/app_manager_no_uerapp"
+                />
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/operation_layout"
+                android:divider="#00000000"
+                android:fadingEdge="none"
+                android:visibility="gone"
+                android:overScrollFooter="@null"
+                android:scrollbars="none" >
+            </ListView>
+
+            <com.gto.zero.zboost.common.ui.floatlistview.FloatingGroupExpandableListView
+                android:id="@+id/float_listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/operation_layout"
+                android:layout_below="@id/title"
+                android:divider="#00000000"
+                android:fadingEdge="none"
+                android:scrollbars="none"
+                android:overScrollFooter="@null"
+                android:visibility="gone" >
+            </com.gto.zero.zboost.common.ui.floatlistview.FloatingGroupExpandableListView>
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>

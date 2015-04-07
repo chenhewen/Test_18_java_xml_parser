@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/memory_boosting_process_ram_size_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="210dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/memory_boosting_process_ram_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@string/font_families_roboto"
+            android:singleLine="true"
+            android:text="1.2"
+            android:textColor="@color/white"
+            android:textSize="37dp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/memory_boosting_process_ram_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="8dp"
+            android:fontFamily="@string/font_families_roboto"
+            android:singleLine="true"
+            android:text="GB"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/memory_boosting_process_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/memory_boosting_process_ram_size_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@string/font_families_roboto"
+        android:singleLine="true"
+        android:text="360 Cleaner"
+        android:textColor="#FF7C7FFB"
+        android:textSize="15dp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/memory_boosting_process_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/memory_boosting_process_app_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@string/font_families_roboto"
+        android:singleLine="true"
+        android:text="5/12"
+        android:textColor="#FF7C7FFB"
+        android:textSize="17dp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/memory_boosting_process_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/memory_boosting_process_progress"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@string/font_families_roboto_light"
+        android:singleLine="true"
+        android:text="@string/boosting_tips"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:textStyle="normal" />
+
+</RelativeLayout>

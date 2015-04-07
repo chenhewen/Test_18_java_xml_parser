@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gto.zero.zboost.common.ui.CommonTitle xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/common_title_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_title_height"
+    android:layout_alignParentTop="true" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+        <com.gto.zero.zboost.common.ui.ClickTransparentLayout
+            android:id="@+id/common_title_back_and_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/common_title_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/common_title_back_padding_left"
+                android:contentDescription="@null"
+                android:src="@drawable/common_title_back" />
+
+            <TextView
+                android:id="@+id/common_title_main_text"
+                style="@style/common_title_main_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/common_title_main_text_margin_left"
+                android:ellipsize="middle"
+                android:fontFamily="@string/font_families_roboto"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/boost_main_act_title"
+                android:textStyle="normal" />
+        </com.gto.zero.zboost.common.ui.ClickTransparentLayout>
+    </LinearLayout>
+
+    <com.gto.zero.zboost.common.ui.ClickTransparentLayout
+        android:id="@+id/common_title_main_extra_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="right"
+        android:minWidth="@dimen/common_title_height"
+        android:paddingRight="@dimen/common_title_extra_padding_right"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/common_title_main_extra_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:duplicateParentState="true"
+            android:focusableInTouchMode="false" />
+    </com.gto.zero.zboost.common.ui.ClickTransparentLayout>
+
+</com.gto.zero.zboost.common.ui.CommonTitle>

@@ -1,0 +1,398 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- title -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_title_height"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="0dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/main_icon" />
+
+        <!-- app name -->
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:fontFamily="@string/font_families_roboto"
+            android:paddingLeft="15dp"
+            android:paddingRight="0dp"
+            android:text="@string/app_name"
+            android:textColor="#FFFFFFFF"
+            android:textSize="21.5sp"
+            android:textStyle="bold" />
+
+        <!-- root -->
+
+        <com.gto.zero.zboost.activity.ui.IconButton
+            android:id="@+id/root"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:padding="16dp"
+            android:src="@drawable/btn_root" />
+
+        <!-- menu -->
+
+        <com.gto.zero.zboost.activity.ui.IconButton
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:src="@drawable/btn_menu" />
+    </LinearLayout>
+
+    <!-- 内存区域 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="left"
+        android:layout_weight="4"
+        android:orientation="horizontal"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp" >
+
+        <com.gto.zero.zboost.common.ui.CommonZoomButton
+            android:id="@+id/progress_ram_layout"
+            android:layout_width="@dimen/main_pv_ram_size"
+            android:layout_height="match_parent"
+            android:clipChildren="false" >
+
+            <ImageView
+                android:id="@+id/shadow_ram"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/main_shadow" />
+
+            <com.gto.zero.zboost.activity.ui.ProgressView
+                android:id="@+id/progress_ram"
+                android:layout_width="@dimen/main_pv_ram_size"
+                android:layout_height="@dimen/main_pv_ram_size"
+                android:layout_gravity="center_vertical" />
+        </com.gto.zero.zboost.common.ui.CommonZoomButton>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/main_ram_margin"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_aval_ram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/font_families_roboto"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:textColor="#CCFFFFFF"
+                android:textSize="@dimen/main_ram_size_textsize"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/font_families_roboto"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:text="@string/available"
+                android:textColor="#CCFFFFFF"
+                android:textSize="@dimen/main_available_textsize"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_total_ram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/main_total_bg"
+                android:fontFamily="@string/font_families_roboto"
+                android:singleLine="true"
+                android:text="@string/available"
+                android:textColor="#CCFFFFFF"
+                android:textSize="@dimen/main_total_textsize"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 存储区域 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="left"
+        android:layout_weight="3"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp" >
+
+        <com.gto.zero.zboost.common.ui.CommonZoomButton
+            android:id="@+id/progress_storage_layout"
+            android:layout_width="@dimen/main_pv_storage_size"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:clipChildren="false" >
+
+            <ImageView
+                android:id="@+id/shadow_storage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/main_shadow" />
+
+            <com.gto.zero.zboost.activity.ui.ProgressView
+                android:id="@+id/progress_storage"
+                android:layout_width="@dimen/main_pv_storage_size"
+                android:layout_height="@dimen/main_pv_storage_size"
+                android:layout_gravity="right|center_vertical" />
+        </com.gto.zero.zboost.common.ui.CommonZoomButton>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/main_storage_margin"
+            android:layout_toLeftOf="@id/progress_storage_layout"
+            android:gravity="center_vertical|right"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_aval_storage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/font_families_roboto"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:textColor="#FF76B54B"
+                android:textSize="@dimen/main_storage_size_textsize"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/aval_storage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/font_families_roboto"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:text="@string/available"
+                android:textColor="#FF76B54B"
+                android:textSize="@dimen/main_available_textsize"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_total_storage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/main_total_bg"
+                android:fontFamily="@string/font_families_roboto"
+                android:singleLine="true"
+                android:text="@string/available"
+                android:textColor="#FFFFFFFF"
+                android:textSize="@dimen/main_total_textsize"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 底部按钮区域 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_button_layout_height"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <com.gto.zero.zboost.view.FlipRelativeLayout
+            android:id="@+id/reversable_boost_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:id="@+id/boost"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/main_button_selector" >
+
+                <com.gto.zero.zboost.activity.ui.AutoResizeTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/icon_boost"
+                    android:fontFamily="@string/font_families_roboto"
+                    android:singleLine="true"
+                    android:text="@string/main_button_boost"
+                    android:textColor="#BF848484"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/main_button_selector" >
+
+                <TextView
+                    android:id="@+id/autostart_count_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/auto_start_app_unit"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@string/font_families_roboto"
+                    android:includeFontPadding="false"
+                    android:textColor="#FFFE6969"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/auto_start_app_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/auto_start_text"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="23dp"
+                    android:fontFamily="@string/font_families_roboto"
+                    android:text="APPs"
+                    android:textColor="@color/main_screen_bottom_back_grey_color"
+                    android:textSize="9sp" />
+
+                <com.gto.zero.zboost.activity.ui.AutoResizeTextView
+                    android:id="@+id/auto_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/icon_storage_transparent"
+                    android:fontFamily="@string/font_families_roboto"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/boost_main_act_tab_autostart"
+                    android:textColor="#BF848484"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+            </RelativeLayout>
+        </com.gto.zero.zboost.view.FlipRelativeLayout>
+
+        <com.gto.zero.zboost.view.FlipRelativeLayout
+            android:id="@+id/reversable_storage_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:id="@+id/storage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/main_button_selector" >
+
+                <com.gto.zero.zboost.activity.ui.AutoResizeTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/icon_storage"
+                    android:fontFamily="@string/font_families_roboto"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/main_button_storage"
+                    android:textColor="#BF848484"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/main_button_selector" >
+
+                <TextView
+                    android:id="@+id/storage_back_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/storage_back_unit"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@string/font_families_roboto"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/main_screen_bottom_back_grey_color"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/storage_back_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/storage_back_text"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="23dp"
+                    android:fontFamily="@string/font_families_roboto"
+                    android:text="MB"
+                    android:textColor="@color/main_screen_bottom_back_grey_color"
+                    android:textSize="9sp" />
+
+                <com.gto.zero.zboost.activity.ui.AutoResizeTextView
+                    android:id="@+id/storage_back_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/icon_storage_transparent"
+                    android:fontFamily="@string/font_families_roboto"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/main_button_storage"
+                    android:textColor="#BF848484"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+            </RelativeLayout>
+        </com.gto.zero.zboost.view.FlipRelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/manage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/main_button_selector" >
+
+            <com.gto.zero.zboost.activity.ui.AutoResizeTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/icon_manage"
+                android:fontFamily="@string/font_families_roboto"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/main_button_manage"
+                android:textColor="#BF848484"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="normal" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

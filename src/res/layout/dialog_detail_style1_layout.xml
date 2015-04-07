@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/dialog_common_padding" >
+
+    <TextView
+        android:id="@+id/vertion_tip"
+        style="@style/dialog_common_version_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/common_vertion" />
+
+    <TextView
+        android:id="@+id/version"
+        style="@style/dialog_common_versionname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vertion_tip"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:includeFontPadding="false"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxWidth="130dp"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/detail"
+        style="@style/dialog_common_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/version"
+        android:layout_alignTop="@id/version"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="@dimen/common_margin"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@id/version"
+        android:layout_toRightOf="@id/version" />
+
+</merge>

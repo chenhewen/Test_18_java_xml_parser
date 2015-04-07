@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_boost_main"
+    android:layout_width="match_parent"
+    android:background="#FFEEEEEE"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/fragment_boost_main_color_views_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boost_main_top_panel_with_tab_title_height" >
+
+        <com.gto.zero.zboost.function.boost.ui.BoostBackgroundColorView
+            android:id="@+id/fragment_boost_main_running_color_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.gto.zero.zboost.function.boost.ui.BoostBackgroundColorView
+            android:id="@+id/fragment_boost_main_autostart_color_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/fragment_boost_main_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- <View -->
+    <!-- android:id="@+id/fragment_boost_main_title_background_mark" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="@dimen/boost_main_title_and_tab_title_height" -->
+    <!-- android:layout_alignParentTop="true" -->
+    <!-- android:background="#00000000" /> -->
+
+    <include
+        android:id="@+id/fragment_boost_main_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_title_height"
+        android:layout_alignParentTop="true"
+        layout="@layout/common_title_layout" />
+
+    <com.gto.zero.zboost.view.AASlidingTabLayout
+        android:id="@+id/fragment_boost_main_tab_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boost_main_tab_title_height"
+        android:layout_below="@id/fragment_boost_main_title_layout" />
+
+</RelativeLayout>

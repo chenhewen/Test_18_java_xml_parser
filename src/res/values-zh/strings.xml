@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">極加速</string>
+    <string name="action_settings">設置</string>
+
+    <!-- ==========字体模块========== -->
+    <string name="font_families_roboto">sans-serif</string>
+    <string name="font_families_roboto_thin">sans-serif-thin</string>
+    <string name="font_families_roboto_light">sans-serif-light</string>
+    <string name="font_families_roboto_condensed">sans-serif-condensed</string>
+
+    <!-- ========= 共用模块 ========= -->
+    <string name="common_yes">是</string>
+    <string name="common_no">否</string>
+    <string name="common_ok">確定</string>
+    <string name="common_select">選擇</string>
+    <string name="common_delete">删除</string>
+    <string name="common_others">其它</string>
+    <string name="common_stop">停止</string>
+    <string name="common_uninstall">卸載</string>
+    <string name="common_back_up">備份</string>
+    <string name="common_cancel">取消</string>
+    <string name="common_install">安装</string>
+    <string name="common_installed">已安装</string>
+    <string name="common_vertion">版本</string>
+    <string name="common_update">升級</string>
+    <string name="common_insufficient_storate">存儲空間不足</string>
+    <string name="common_no_sdcard">SDCard Not Found</string>
+
+    <!-- ========= 主界面 ========= -->
+    <string name="available">可用</string>
+    <string name="main_ram_title">內存</string>
+    <string name="main_storage_title">存儲空間</string>
+    <string name="main_button_boost">內存加速</string>
+    <string name="main_button_storage">垃圾文件</string>
+    <string name="main_button_manage">應用管理</string>
+    <string name="main_ram_total">%s 總量</string>
+    <string name="main_storage_total">%s 總量</string>
+    <string name="tip_press_again_to_exit">再按一次退出</string>
+
+    <!-- ========= 菜单 ========= -->
+    <string name="menu_setting">設置</string>
+    <string name="menu_update">升級</string>
+    <string name="menu_feedback">反饋</string>
+    <string name="menu_about">關於</string>
+
+    <!-- ========= 内存加速模块 ========= -->
+
+    <string name="boost_main_act_title">內存加速</string>
+    <string name="boost_main_act_tab_running">正在運行</string>
+    <string name="boost_main_act_tab_autostart">開機自啟</string>
+    <string name="boost_running_apps_custom">%1$d 個應用已選中</string>
+    <string name="boosting_memory_act_title">內存加速</string>
+    <string name="boosting_tips">正在加速</string>
+    <string name="boosting_power_tips">強力加速中</string>
+    <string name="boosted_to_optimus_tips">已加速到最佳狀態！</string>
+    <string name="boosted_active_power_mode_tips">檢測到%1$d 個進程又復活了。 使用強力模式徹底解決他們!</string>
+    <string name="enable_super_boost_enable">立即開啟</string>
+    <string name="enable_super_boost_title">開啟強力模式</string>
+    <string name="enable_super_boost_main_text">為了更有效地加速手機，建議您開啟輔助功能選項：</string>
+    <string name="enable_super_boost_content_text1" formatted="false">更徹底的結束進程，媲美已ROOT效果。</string>
+    <string name="enable_super_boost_content_text2" formatted="false">降低電量消耗</string>
+    <string name="enable_super_boost_content_text3" formatted="false">超過85％的用戶已開啟強力模式</string>
+    <string name="boost_turn_on_boost_accessibility_service_tip">點擊“服務”中的“Z Speed​​+”</string>
+    <!-- =========boost_accessibility======== -->
+    <string name="boost_accessibility_service_description">點擊右上角的開關激活極加速的強力模式，以達到最大的加速效果！ \n\n極加速使用輔助功能特性來幫您停止無用進程。請勿擔心接下來彈出的隱私風險提醒，我們承諾不會收集您的任何信息。</string>
+
+    <!-- =========auto start======== -->
+    <string name="autostart_app_desr">項</string>
+    <string name="autostart_optimization_desr">可優化</string>
+    <string name="autostart_type_optimization">待處理</string>
+    <string name="autostart_type_allowed">允許自啟</string>
+    <string name="autostart_type_blocked">禁止自啟</string>
+    <string name="autostart_type_system">系統預裝</string>
+    <string name="autostart_type_system_description">禁止系統預裝軟件的自啟動可能會導致系統不穩定，請謹慎操作！</string>
+    <string name="autostart_preinstll_system">系統預裝</string>
+    <string name="autostart_on_boot_up">開機自啓</string>
+    <string name="autostart_on_background">後臺自啓</string>
+    <string name="autostart_on_boot_up_and_background">開機自啓/後臺自啓</string>
+    <string name="autostart_detail_title">在以下%1$d種情況會自啓動:</string>
+
+    <!-- ========= 白名单模块 ========= -->
+    <string name="ignore_list_act_title">忽略列表</string>
+    <string name="add_to_ignore_list_act_title">添加至忽略列表</string>
+    <string name="dialog_memory_footprint">內存使用</string>
+    <string name="dialog_add_to_ignorelist">添加至忽略列表</string>
+    <string name="dialog_remove_from_ignorelist">移出忽略列表</string>
+    <string name="tip_ignore_list_appunchecked">清理內存時默認不勾選以下應用</string>
+    <string name="tip_ignore_list_appadd">點擊+號添加需要忽略的應用</string>
+
+    <!-- ========= 应用管理模块 ========= -->
+    <string name="app_manager">應用管理</string>
+    <string name="app_manager_my_backups">我的備份</string>
+    <string name="app_manager_others">其它</string>
+    <string name="app_manager_back_up_success_tips">个应用已备份至：</string>
+    <string name="app_manager_back_up_success_tips_for_one">個應用已備份至：</string>
+    <string name="app_manager_back_up_fail_tips">個應用備份失敗</string>
+    <string name="app_manager_back_up_fail_tips_for_one">個應用備份失敗</string>
+    <string name="app_manager_pre_installed_apps">系統預裝</string>
+    <string name="app_manager_backing_up">正在備份</string>
+    <string name="app_manager_running">正在運行</string>
+    <string name="app_manager_stop">停止</string>
+    <string name="app_manager_apps_running">個應用正在運行</string>
+    <string name="app_manager_apps_desc">停用無用的程式可以減少資源消耗，放心操作。</string>
+    <string name="app_manager_path">路徑</string>
+    <string name="app_manager_no_backup_found">​​未找到備份文件</string>
+    <string name="app_manager_tap_to_disable">點擊停用/關閉</string>
+    <string name="app_manager_tap_to_enable">點擊啟用/啟動</string>
+    <string name="app_manager_select_app_first">請先選擇應用</string>
+    <string name="app_manager_shit">確定</string>
+    <string name="app_manager_freed">已釋放</string>
+    <string name="app_manager_use_rare_month">一個月內未使用</string>
+    <string name="app_manager_use_rare_days">%s天未使用</string>
+    <string name="app_manager_use_commonly">最近使用</string>
+    <string name="app_manager_android_system">Android系統</string>
+    <string name="app_manager_use_rare">未使用</string>
+    <!-- wy -->
+    <string name="app_manager_tab_userapps">用戶軟件</string>
+    <string name="app_manager_tab_system">預裝軟件</string>
+    <string name="app_manager_tab_text_date">日期</string>
+    <string name="app_manager_tab_text_frequance">頻率</string>
+    <string name="app_manager_tab_text_size">大小</string>
+    <string name="app_manager_tab_text_battery">電量</string>
+    <string name="app_manager_tab_text_name">Name</string>
+    <string name="app_manager_dialog_cancel">取消</string>
+    <string name="app_manager_dialog_backup">備份</string>
+    <string name="app_manager_dialog_uninstall">卸載</string>
+    <string name="app_manager_preinstall_noyice"><Data>
+<![CDATA[&nbsp&nbsp&nbsp&nbsp<font color="#76B54B"> %s 應用正在運行</font> 停用無用程式可減少資源消耗,放心操作
+]]>
+</Data></string>
+    <string name="app_manager_no_uerapp">沒有應用</string>
+
+    <!-- ========= 清理加速模块 ========= -->
+    <string name="clean_main_act_title">垃圾文件</string>
+    <string name="clean_main_suggest">建議清理</string>
+    <string name="clean_main_selected">已選擇</string>
+    <string name="clean_dialog_title">注意</string>
+    <string name="clean_dialog_message1">您選擇的項目中包含以下文件</string>
+    <string name="gallery_thumbnails">縮略圖緩存</string>
+    <string name="clean_gallery_thumbnails_dialog_tips">清理後載入相冊和視頻中內容的縮略圖時會緩慢。</string>
+    <string name="clean_group_residue">殘留文件</string>
+    <string name="clean_group_cache">緩存文件</string>
+    <string name="clean_group_temp">臨時文件</string>
+    <string name="clean_group_apk">安装包</string>
+    <string name="clean_group_big_file">大文件</string>
+    <string name="clean_done_tips">已清理</string>
+    <string name="clean_dialog_app_cache_yes_btn">手動清理</string>
+    <string name="clean_dialog_folder_yes_btn">瀏覽</string>
+    <string name="clean_dialog_file_yes_btn">打開</string>
+    <string name="clean_dialog_media_yes_btn">播放</string>
+    <string name="clean_dialog_message_size">大小</string>
+    <string name="clean_dialog_message_contain">包含</string>
+    <string name="clean_dialog_message_path">路徑</string>
+    <string name="clean_dialog_message_file">個文件</string>
+    <string name="clean_dialog_message_folder">個文件夾</string>
+    <string name="clean_done_none_tips">很乾淨了</string>
+
+    <!-- ========= 卸载弹窗界面 ============= -->
+    <string name="uninstall_dialog">清理</string>
+    <string name="uninstall_dialog_message_1">檢測到%1$s 的&lt;font color="#85c443">%2$s&lt;/font>殘留文件</string>
+    <string name="uninstall_dialog_message_2">包含有: </string>
+    <string name="uninstall_clean_tips">殘留文件已釋放!</string>
+
+    <!-- ========= 菜单界面 ============= -->
+    <string name="commontitle_setting_setting">設置</string>
+
+    <!-- ========= 菜单feedback =========== -->
+    <string name="title_feedback_setting">反饋</string>
+    <string name="container_hint_setting_feedback">請盡可能詳細地描述，感謝您的反饋。</string>
+    <string name="mial_hint_setting_feedback">郵箱</string>
+    <string name="notice_setting_feedback">為了更好地定位問題，機型與系統信息將會一起發送。未經允許，不會收集您的個人信息。</string>
+    <string name="no_contain_setting_feedback">不想說點什麼嗎？</string>
+    <string name="sendok_setting_feedback">感謝您的反饋</string>
+    <string name="checknet_setting_feedback">請檢查網絡連接</string>
+
+    <!-- ========= 菜单about =========== -->
+    <string name="facebook_about_setting"><u>在Facebook上關注我們</u></string>
+    <string name="googleplus_about_setting"><u>加入我們的Google+社區</u></string>
+    <string name="googleplay_about_setting"><u>評分點贊</u></string>
+    <string name="title_about_setting">關於</string>
+    <string name="share_title_setting_about">分享極加速</string>
+    <string name="share_setting_about">極加速輕鬆地幫我加速清理了手機，快來試試！下載地址：http://goo.gl/q10oHl</string>
+    <string name="law_setting_about_url">http://goappdl.goforandroid.com/soft/zboost/privacy/privacy_cn.htm</string>
+
+    <!-- ========= 菜单settings ========== -->
+    <string name="title_float_widget">悬浮窗</string>
+    <string name="title_notice">通知提醒</string>
+    <string name="enable_widget_setting_setting">使用悬浮窗</string>
+    <string name="hide_widget_setting_setting">隐藏至状态栏时间</string>
+    <string name="show_widget_setting_setting">仅在桌面上显示</string>
+    <string name="memory_setting_setting">内存空间不足</string>
+    <string name="storge_setting_setting">存储空间不足</string>
+    <string name="junk_setting_setting">卸载残留清理</string>
+    <string name="autostart_setting_setting">新的自启动请求</string>
+    <string name="ignore_setting_setting">忽略列表</string>
+    <string name="memery_boost_setting_setting">进程忽略列表</string>
+
+    <!-- ========== 悬浮窗 ============= -->
+    <string name="float_close_float_message">確定要關閉懸浮窗嗎？</string>
+    <string name="float_hide_float_message">你可以將這個功能隱藏到狀態欄的時間上，想試一下嗎？</string>
+    <string name="float_dialog_ok">確定</string>
+    <string name="float_dialog_cancel">取消</string>
+    <string name="float_dialog_hide_ok">體驗一下</string>
+    <string name="float_dialog_hide_cancel">繼續關閉</string>
+
+    <!-- ==Root 相关 -->
+    <string name="fail_to_Operation">未獲取到Root權限，操作失敗！</string>
+
+    <!-- ========== 通知栏 ============= -->
+    <string name="notification_ram">可用內存低於%s%%</string>
+    <string name="notification_boost">加速</string>
+    <string name="notification_sdcard">存儲空間不足，點擊清理！</string>
+    <string name="notification_release_more"><Data><![CDATA[%s MB 已釋放. <font color="#85c443">釋放更多!</font>]]></Data></string>
+
+    <!-- 文件类型 -->
+    <string name="file_open_as">打開為</string>
+    <string name="filetype_text">文本</string>
+    <string name="filetype_video">視頻</string>
+    <string name="filetype_audio">音頻</string>
+    <string name="filetype_image">圖片</string>
+    
+    
+    <!-- 版本更新 -->
+    <string name="update_notice">新版本</string>
+    <string name="update_update">更新</string>
+    <string name="update_later">稍後</string>
+    <string name="update_cancel">取消</string>
+    
+    <!-- 自启方式 -->
+	<string name="auto_start_on_boot">開機後</string>
+	<string name="auto_start_on_connectivity_change">任何網絡連接時</string>
+	<string name="auto_start_on_package_changed">應用狀態改變時</string>
+	<string name="auto_start_on_package_added">新裝應用時</string>
+	<string name="auto_start_on_package_removed">卸載應用時</string>
+	<string name="auto_start_on_package_replaced">替換應用時</string>
+	<string name="auto_start_on_any_data_state">移動網絡開啟或關閉時</string>
+	<string name="auto_start_on_outgoing_call">撥打電話時</string>
+	<string name="auto_start_on_phone_state_changed">掛斷電話時</string>
+	<string name="auto_start_on_user_present">手機解鎖時</string>
+	<string name="auto_start_on_wifi_state_change">Wifi連接成功時</string>
+	<string name="auto_start_on_wifi_enable_change">Wifi開啟或關閉時</string>
+	<string name="auto_start_on_time_set">設置時間時</string>
+	<string name="auto_start_on_bluetooth_state_change">更改藍牙狀態時</string>
+	<string name="auto_start_on_power_connected">連接電源時</string>
+	<string name="auto_start_on_power_disconnected">斷開電源時</string>
+
+</resources>

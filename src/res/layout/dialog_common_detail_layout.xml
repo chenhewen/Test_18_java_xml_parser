@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:paddingTop="@dimen/dialog_common_padding" >
+
+    <LinearLayout
+        android:id="@+id/dialog_common_detail_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dialog_common_padding" >
+
+        <ImageView
+            android:id="@+id/dialog_common_detail_top_icon"
+            android:layout_width="@dimen/dialog_icon_width"
+            android:layout_height="@dimen/dialog_icon_width" />
+
+        <TextView
+            android:id="@+id/dialog_common_detail_top_appname"
+            style="@style/common_dialog_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/dialog_common_padding" />
+
+        <com.gto.zero.zboost.common.ui.ClickTransparentLayout
+            android:id="@+id/dialog_common_detail_top_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="right"
+            android:minWidth="@dimen/common_title_height"
+            android:paddingRight="@dimen/common_title_extra_padding_right" >
+
+            <ImageView
+                android:id="@+id/dialog_common_detail_top_appdetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:contentDescription="@null"
+                android:duplicateParentState="true"
+                android:focusableInTouchMode="false" />
+        </com.gto.zero.zboost.common.ui.ClickTransparentLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/dialog_common_detail_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
+
+        <TextView
+            android:id="@+id/dialog_common_detail_left"
+            style="@style/dialog_common_button_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/common_dialog_btn_selector"
+            android:clickable="true"
+            android:padding="@dimen/dialog_common_padding"
+            android:text="@string/app_manager_dialog_cancel" />
+
+        <TextView
+            android:id="@+id/dialog_common_detail_right"
+            style="@style/dialog_common_button_uninstall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/common_dialog_btn_selector"
+            android:clickable="true"
+            android:padding="@dimen/dialog_common_padding"
+            android:text="@string/app_manager_dialog_uninstall" />
+
+        <TextView
+            android:id="@+id/dialog_common_detail_middle"
+            style="@style/dialog_common_button_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/dialog_common_detail_right"
+            android:background="@drawable/common_dialog_btn_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="@dimen/dialog_common_padding"
+            android:text="@string/app_manager_dialog_backup" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dialog_common_detail_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/dialog_common_detail_bottom"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/dialog_common_detail_top"
+        android:paddingLeft="@dimen/dialog_common_padding" >
+    </RelativeLayout>
+
+</RelativeLayout>

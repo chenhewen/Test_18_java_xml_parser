@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- 主界面 -->
+    <!-- ram进度视图 -->
+    <dimen name="main_pv_ram_size">215dp</dimen>
+    <dimen name="main_pv_ram_progress_textsize">70sp</dimen>
+    <dimen name="main_pv_ram_unit_textsize">30sp</dimen>
+    <dimen name="main_pv_ram_title_textsize">18sp</dimen>
+    <dimen name="main_pv_ram_title_padding">13.5sp</dimen>
+    <dimen name="main_pv_ram_progress_ring_width">6.5dp</dimen>
+    <dimen name="main_pv_ram_progress_ring_padding">5dp</dimen>
+    <!-- storage进度视图 -->
+    <dimen name="main_pv_storage_size">160dp</dimen>
+    <dimen name="main_pv_storage_progress_textsize">45sp</dimen>
+    <dimen name="main_pv_storage_unit_textsize">25sp</dimen>
+    <dimen name="main_pv_storage_title_textsize">15sp</dimen>
+    <dimen name="main_pv_storage_title_padding">10.5sp</dimen>
+    <dimen name="main_pv_storage_progress_ring_width">6.5dp</dimen>
+    <dimen name="main_pv_storage_progress_ring_padding">5dp</dimen>
+    <!-- 描述文字 -->
+    <dimen name="main_ram_margin">24dp</dimen>
+    <dimen name="main_storage_margin">24dp</dimen>
+    <dimen name="main_ram_size_textsize">27sp</dimen>
+    <dimen name="main_storage_size_textsize">27sp</dimen>
+    <dimen name="main_available_textsize">23sp</dimen>
+    <dimen name="main_total_textsize">18sp</dimen>
+    <!-- 底部按钮区域高度 -->
+    <dimen name="main_button_layout_height">120dp</dimen>
+
+</resources>

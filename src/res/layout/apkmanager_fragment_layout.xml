@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@android:color/white" >
+
+    <!--
+         <com.gto.zero.zboost.common.ui.floatlistview.FloatingGroupExpandableListView
+        android:id="@+id/floating_listview"list
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:childDivider="@color/common_listview_divider"
+        android:divider="#00000000" />
+    -->
+
+	<include 
+        android:id="@+id/title"
+        layout="@layout/common_title_layout"
+        android:layout_width="match_parent"
+    	android:layout_height="@dimen/common_title_height"
+        />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none" 
+        android:layout_below="@id/title"
+        android:divider="#00000000"
+        android:overScrollFooter="@null"
+        android:scrollbars="none" >
+    </ListView>
+    
+    <com.gto.zero.zboost.view.ProgressWheel
+        android:id="@+id/progress_wheel"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_centerInParent="true"
+        wheel:matProg_barColor="@color/common_green_normal"
+        wheel:matProg_barWidth="3dp"
+        wheel:matProg_progressIndeterminate="true" />
+    
+    <TextView 
+        android:id="@+id/no_backup_found"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center"
+		style="@style/common_item_name"
+		android:text="@string/app_manager_no_backup_found"
+		android:visibility="gone"
+        />
+    
+    
+    <include 
+        android:id="@+id/delete"
+        android:layout_width="@dimen/common_round_button_layout_width"
+        android:layout_height="@dimen/common_round_button_layout_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        layout="@layout/common_round_button_layout" 
+        android:visibility="invisible"/>
+
+</RelativeLayout>
