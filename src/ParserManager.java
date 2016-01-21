@@ -122,7 +122,7 @@ public class ParserManager {
 		mFileManager.copyDir(srcDir, destDir, Main.REGEX);
 		for (File f: mFileManager.getFiles(destDir)) {
 			Map<String, String> stringMap = mParser.parseFile(f, XmlParser.GET_LINE);
-			//直接调用该方法, 有损效率, 因为没有必要替换其中的内容
+			//直接调用该方法, 有损效率, 因为没有必要替换其中的内容			
 			formatAndComplete(f, modleFile);
 			mParser.remove(f, stringMap);
 		}

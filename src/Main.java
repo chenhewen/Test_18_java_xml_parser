@@ -41,28 +41,28 @@ public class Main {
 		
 		//测试...
 		
-		/*File[] stringFiles = fileManager.getStringFiles(new File(RES_DIR), REGEX);
-		Map<String, String> modleMap = parser.parseFile(new File(ENGLISH_FILEPATH), MyParser.GET_LINE);
-		
-		for (File stringFile : stringFiles) {
-			Map<String, String> comparedMap = parser.parseFile(stringFile, MyParser.GET_LINE);
-			Map<String, String> dictingMap = parserManager.compare(modleMap, comparedMap);
-			Utils.printMap(dictingMap, stringFile);
-			Utils.saveInFile(dictingMap, stringFile, new File(RES_DIR+"2"));
-		}*/
-		
-		/*File modleFile = new File("/home/chenhewen/桌面/res/values/strings.xml");
-		File correctFile = new File("/home/chenhewen/桌面/res/values-ir/strings.xml");
-		parserManager.formatAndCompleteAsModule(correctFile, modleFile);*/
-		
-		//parserManager.createDistinctFile(new File("/home/chenhewen/F/GoStore/ZBoost/res"), new File("/home/chenhewen/桌面/rescopy"), new File(ENGLISH_FILEPATH));
-		
-		/*File file = new File("/home/chenhewen/桌面/res/values/strings.xml");
-		Map<String, String> map = parser.parseFile(file, MyParser.GET_LINE);
-		parser.remove(file, map);*/
-		
-//		Map<String, String> map = parser.parseFile(new File(ENGLISH_FILEPATH), XmlParser.GET_TEXT_CONTENT);
-//		excelManager.putMap(map, new File("/home/chenhewen/桌面/excel.xls"));
+				/*File[] stringFiles = fileManager.getStringFiles(new File(RES_DIR), REGEX);
+				Map<String, String> modleMap = parser.parseFile(new File(ENGLISH_FILEPATH), MyParser.GET_LINE);
+				
+				for (File stringFile : stringFiles) {
+					Map<String, String> comparedMap = parser.parseFile(stringFile, MyParser.GET_LINE);
+					Map<String, String> dictingMap = parserManager.compare(modleMap, comparedMap);
+					Utils.printMap(dictingMap, stringFile);
+					Utils.saveInFile(dictingMap, stringFile, new File(RES_DIR+"2"));
+				}*/
+				
+				/*File modleFile = new File("/home/chenhewen/桌面/res/values/strings.xml");
+				File correctFile = new File("/home/chenhewen/桌面/res/values-ir/strings.xml");
+				parserManager.formatAndCompleteAsModule(correctFile, modleFile);*/
+				
+				//parserManager.createDistinctFile(new File("/home/chenhewen/F/GoStore/ZBoost/res"), new File("/home/chenhewen/桌面/rescopy"), new File(ENGLISH_FILEPATH));
+				
+				/*File file = new File("/home/chenhewen/桌面/res/values/strings.xml");
+				Map<String, String> map = parser.parseFile(file, MyParser.GET_LINE);
+				parser.remove(file, map);*/
+				
+//				Map<String, String> map = parser.parseFile(new File(ENGLISH_FILEPATH), XmlParser.GET_TEXT_CONTENT);
+//				excelManager.putMap(map, new File("/home/chenhewen/桌面/excel.xls"));
 		
 	}
 }

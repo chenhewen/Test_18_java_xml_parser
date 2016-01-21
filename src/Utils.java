@@ -16,7 +16,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NamedNodeMap;
 
 /**
- * Â∑•ÂÖ∑Á±ª
+ * π§æﬂ¿‡
  */
 public class Utils {
 	
@@ -73,7 +73,7 @@ public class Utils {
 	}
 	
 	public static boolean copyFile(String srcStr, String decStr) {
-		// ÂâçÊèê
+		// «∞Ã·
 		File srcFile = new File(srcStr);
 		if (!srcFile.exists()) {
 			return false;

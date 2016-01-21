@@ -15,8 +15,7 @@ import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 import org.apache.poi.ss.usermodel.Cell;
 
 /**
- * Excel逻辑处理类
- */
+ * Excel逻辑处理类 */
 public class ExcelManager {
 	
 	/**

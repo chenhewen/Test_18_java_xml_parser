@@ -23,17 +23,15 @@ import org.xml.sax.SAXException;
  *
  */
 public class XmlParser {
-	
+
 	public int mGetType = 0;
-	
+
 	public static final int GET_LINE = 1;
-	
+
 	public static final int GET_TEXT_CONTENT = 2;
-	
-	
-	
+
 	Map<String, String> mStringNameMap;
-	
+
 	/**
 	 * 获取xml文件中所有的string tab的name作为key, 整行信息作为value
 	 * @param file xml文件
@@ -69,10 +67,10 @@ public class XmlParser {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
 		return mStringNameMap;
 	}
-	
+
 	/**
 	 * 替换制定xml文件中的指定的值
 	 * @param replacedFile 要替换的xml文件
@@ -98,14 +96,14 @@ public class XmlParser {
 				}
 			}
 			//修改后提交
-			 TransformerFactory factory2 = TransformerFactory.newInstance();
-			 Transformer former = factory2.newTransformer();
-			 former.transform(new DOMSource(document), new StreamResult(replacedFile));
-		} catch(Exception e) {
+			TransformerFactory factory2 = TransformerFactory.newInstance();
+			Transformer former = factory2.newTransformer();
+			former.transform(new DOMSource(document), new StreamResult(replacedFile));
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	/**
 	 * 从制定的string.xml文件中删除map中的值
 	 * @param operateFile
@@ -123,7 +121,7 @@ public class XmlParser {
 			root = document.getDocumentElement();
 			resourcesList = root.getElementsByTagName("string");
 			//一定要从后向前遍历
-			for (int i = resourcesList.getLength() - 1; i >= 0 ; i--) {
+			for (int i = resourcesList.getLength() - 1; i >= 0; i--) {
 				Element element = (Element) resourcesList.item(i);
 				String key = element.getAttribute("name");
 				if (stringMap.containsKey(key)) {
@@ -131,11 +129,11 @@ public class XmlParser {
 				}
 			}
 			//修改后提交
-			 TransformerFactory factory2 = TransformerFactory.newInstance();
-			 Transformer former = factory2.newTransformer();
-			 former.transform(new DOMSource(document), new StreamResult(operateFile));
-		} catch(Exception e) {
+			TransformerFactory factory2 = TransformerFactory.newInstance();
+			Transformer former = factory2.newTransformer();
+			former.transform(new DOMSource(document), new StreamResult(operateFile));
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}	
+	}
 }
