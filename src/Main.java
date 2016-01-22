@@ -1,6 +1,6 @@
 import java.io.File;
 /**
- * 启动类
+ * 启动类Main
  * @author chenhewen
  *
  */
