@@ -75,8 +75,9 @@ public class XmlParser {
 	 * 替换制定xml文件中的指定的值
 	 * @param replacedFile 要替换的xml文件
 	 * @param stringMap key:name属性的值, value:textContent 也即尖括号之间的文本
+	 * @param deleteLineNotFoundInMap 是否从replacedFile中删除在stringMap中没有的行
 	 */
-	public void replaceTextContent(File replacedFile, Map<String, String> stringMap) {
+	public void replaceTextContent(File replacedFile, Map<String, String> stringMap, boolean deleteLineNotFoundInMap) {
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder buidler = null;
 		Document document = null;
@@ -93,6 +94,8 @@ public class XmlParser {
 				String textContent = stringMap.get(key);
 				if (textContent != null) {
 					element.setTextContent(textContent);
+				} else if (deleteLineNotFoundInMap) {
+					element.getParentNode().removeChild(element);
 				}
 			}
 			//修改后提交

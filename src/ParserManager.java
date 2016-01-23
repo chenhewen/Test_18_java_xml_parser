@@ -46,12 +46,12 @@ public class ParserManager {
 	}
 	
 	/**
-	 * 将要更改的文件替换为模板文件的格式, 同时替换要更改文件的
-	 * @param modleFile 模板文件
-	 * @param correctFile 要更改的文件
+	 * 
+	 * @param correctFile
+	 * @param modleFile
+	 * @param isCompleteCorrectFileWithModleFile
 	 */
-	public void formatAndComplete(File correctFile, File modleFile) {
-
+	public void formatPrivate(File correctFile, File modleFile, boolean isCompleteCorrectFileWithModleFile) {
 		//1. 从将要格式化的文件中提取数据信息
 		Map<String, String> stringMap = mParser.parseFile(correctFile, XmlParser.GET_TEXT_CONTENT);
 
@@ -62,9 +62,22 @@ public class ParserManager {
 
 		//3. 将步骤2中创建的文件中的数据替换未提取的数据, 注意提取数据是其子集
 		File copyFile = new File(copyPath);
-		mParser.replaceTextContent(copyFile, stringMap);
+		mParser.replaceTextContent(copyFile, stringMap, !isCompleteCorrectFileWithModleFile);
 		correctFile.delete();
 		copyFile.renameTo(correctFile);
+	}
+	
+	public void format(File correctFile, File modleFile) {
+		formatPrivate(correctFile, modleFile, false);
+	}
+	
+	/**
+	 * 将要更改的文件替换为模板文件的格式, 同时替换要更改文件的
+	 * @param modleFile 模板文件
+	 * @param correctFile 要更改的文件
+	 */
+	public void formatAndComplete(File correctFile, File modleFile) {
+		formatPrivate(correctFile, modleFile, true);
 	}
 	
 	/**
@@ -73,7 +86,7 @@ public class ParserManager {
 	 * @param modleFile
 	 */
 	public void formatAndCompleteDir(File srcDir, File destDir, File modleFile) {
-		mFileManager.copyDir(srcDir, destDir, Main.REGEX);
+		mFileManager.copyDir(srcDir, destDir, Main.FILE_REGEX);
 		for (File f : mFileManager.getFiles(destDir)) {
 			formatAndComplete(f, modleFile);
 		}
@@ -88,7 +101,7 @@ public class ParserManager {
 	public void translateFile(File insertFile, File destDir) {
 		for (File f: mFileManager.getFiles(destDir)) {
 			Map<String, String> stringMap = mParser.parseFile(destDir, XmlParser.GET_TEXT_CONTENT);
-			mParser.replaceTextContent(f, stringMap);
+			mParser.replaceTextContent(f, stringMap, false);
 		}
 	}
 	
@@ -104,7 +117,7 @@ public class ParserManager {
 				String xmlLanguageName = Utils.getLanguageDirName(insertf.getAbsolutePath());
 				String xlsLanguageName = Utils.getLanguageDirName(f.getAbsolutePath());
 				if (xmlLanguageName.equals(xlsLanguageName)) {
-					mParser.replaceTextContent(insertf, stringMap);
+					mParser.replaceTextContent(insertf, stringMap, false);
 					break;
 				}
 			}
@@ -119,7 +132,7 @@ public class ParserManager {
 	 * @param modleFile
 	 */
 	public void createDistinctFile(File srcDir, File destDir, File modleFile) {
-		mFileManager.copyDir(srcDir, destDir, Main.REGEX);
+		mFileManager.copyDir(srcDir, destDir, Main.FILE_REGEX);
 		for (File f: mFileManager.getFiles(destDir)) {
 			Map<String, String> stringMap = mParser.parseFile(f, XmlParser.GET_LINE);
 			//直接调用该方法, 有损效率, 因为没有必要替换其中的内容			

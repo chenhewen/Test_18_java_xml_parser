@@ -63,11 +63,7 @@ public class FileManager {
 			//instead, we change a way to do same thing as above
 			String relativePath = srcPath.substring(srcFile.getAbsolutePath().length());
 			String desPath = destFile + relativePath;
-			/*try {
-				new File(desPath).createNewFile();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}*/
+			
 			if (pattern.matcher(new File(desPath).getName()).matches()) {
 				Utils.copyFile(srcPath, desPath);
 			}
