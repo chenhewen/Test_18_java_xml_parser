@@ -56,7 +56,12 @@ public class FileManager {
 		File[] files = getFiles(srcFile);
 		for (File file : files) {
 			String srcPath = file.getAbsolutePath();
-			String relativePath = srcPath.split(srcFile.getAbsolutePath())[1];
+			
+			//FIXME this will crash when in windows platform
+			//String relativePath = srcPath.split(srcFile.getAbsolutePath())[1];
+			
+			//instead, we change a way to do same thing as above
+			String relativePath = srcPath.substring(srcFile.getAbsolutePath().length());
 			String desPath = destFile + relativePath;
 			/*try {
 				new File(desPath).createNewFile();

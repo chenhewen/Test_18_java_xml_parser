@@ -5,10 +5,16 @@ import java.io.File;
  *
  */
 public class Main {
-	public static final String RES_DIR = "/home/chenhewen/桌面/res";
-	public static final String RES_DIR_DISTICT_EXCEL = "/home/chenhewen/桌面/res.distict.excel";
-	public static final String RES_DIR_FINAL = "/home/chenhewen/桌面/res.final";
-	public static final String REGEX = "[sS]trings?\\.xml";
+//	public static final String RES_DIR = "/home/chenhewen/桌面/res";
+//	public static final String RES_DIR_DISTICT_EXCEL = "/home/chenhewen/桌面/res.distict.excel";
+//	public static final String RES_DIR_FINAL = "/home/chenhewen/桌面/res.final";
+//	public static final String REGEX = "[sS]trings?\\.xml";
+//	public static final String ENGLISH_FILEPATH = RES_DIR + "/values/strings.xml";
+	
+	public static final String RES_DIR = "F:/桌面/res";
+	public static final String RES_DIR_DISTICT_EXCEL = "F:/桌面/res.distict.excel";
+	public static final String RES_DIR_FINAL = "F:/桌面/res.final";
+	public static final String REGEX = "[sS]trings?.*\\.xml";
 	public static final String ENGLISH_FILEPATH = RES_DIR + "/values/strings.xml";
 	
 	public static void main(String[] args) {
@@ -29,12 +35,13 @@ public class Main {
 		 *    也就是此时, 其他语言中会混杂有英语, 并且按照英文strings.xml进行了格式化.
 		 * 3. 如果产品的翻译回来了, 他们需要提供一个与翻译之前同样的目录结构的文件夹. 这时, 上一步用英文补齐的每一项, 都会被相应的替换   
 		 */
-		parserManager.createDistinctExcel(new File(RES_DIR), new File(RES_DIR_DISTICT_EXCEL), new File(ENGLISH_FILEPATH));
+		/*parserManager.createDistinctExcel(new File(RES_DIR), new File(RES_DIR_DISTICT_EXCEL), new File(ENGLISH_FILEPATH));
 
 		parserManager.formatAndCompleteDir(new File(RES_DIR), new File(RES_DIR_FINAL), new File(ENGLISH_FILEPATH));
 
-		parserManager.translateExcel(new File(RES_DIR_DISTICT_EXCEL), new File(RES_DIR_FINAL));
+		parserManager.translateExcel(new File(RES_DIR_DISTICT_EXCEL), new File(RES_DIR_FINAL));*/
 		
+		parserManager.createDistinctFile(new File(RES_DIR), new File(RES_DIR_DISTICT_EXCEL), new File(ENGLISH_FILEPATH));
 		
 		
 		
