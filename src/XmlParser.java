@@ -14,6 +14,7 @@ import javax.xml.transform.stream.StreamResult;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
@@ -128,6 +129,14 @@ public class XmlParser {
 				Element element = (Element) resourcesList.item(i);
 				String key = element.getAttribute("name");
 				if (stringMap.containsKey(key)) {
+					
+					// 删除空行
+					Node nextSibling = element.getNextSibling();
+					if (nextSibling != null && nextSibling.getNodeType() == Node.TEXT_NODE
+							&& nextSibling.getNodeValue().trim().length() == 0) {
+						element.getParentNode().removeChild(nextSibling);
+					}
+					
 					element.getParentNode().removeChild(element);
 				}
 			}
