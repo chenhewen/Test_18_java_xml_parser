@@ -164,4 +164,16 @@ public class Utils {
 		
 		return "";
 	}
+	
+	/**
+	 * 获取value-ar之类的东西， 不捕获可能的异常
+	 * @param file
+	 * @return
+	 */
+	public static String getValueLaunguageStr(File file) {
+		String name = file.getName();
+		String[] split = name.split("-");
+		return split[0] +"-" + split[1];
+		
+	}
 }

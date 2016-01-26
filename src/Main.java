@@ -44,9 +44,9 @@ public class Main {
 
 		parserManager.translateExcel(new File(RES_DIR_DISTICT_EXCEL), new File(RES_DIR_FINAL));*/
 		
-		parserManager.createDistinctFile(new File(RES_DIR), new File(RES_DIR_DISTICT_EXCEL), new File(ENGLISH_FILEPATH));
+		//parserManager.createDistinctFile(new File(RES_DIR), new File(RES_DIR_DISTICT_EXCEL), new File(ENGLISH_FILEPATH));
 		
-		
+		parserManager.appendFile(new File("F:/桌面/res_inner_v2.0.3_svn204747"), new File("F:/桌面/res"));
 		
 		
 		//测试...

@@ -1,4 +1,5 @@
 import java.io.File;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -67,12 +68,21 @@ public class ParserManager {
 		copyFile.renameTo(correctFile);
 	}
 	
+	/**
+	 * 按照模板的格式，格式化文件
+	 * 举例： 模板文件中有，并且顺序依次为A = x， B = y， C = z的条目， 倘若待格式化的文件有， 并且顺序为C = n, B = m，
+	 * 那么操作结果将是 B = m, C = n
+	 * @param correctFile
+	 * @param modleFile
+	 */
 	public void format(File correctFile, File modleFile) {
 		formatPrivate(correctFile, modleFile, false);
 	}
 	
 	/**
-	 * 将要更改的文件替换为模板文件的格式, 同时替换要更改文件的
+	 * 按照模板的格式，格式化文件, 并且用模板文件补全待格式化文件
+	 * 举例： 模板文件中有，并且顺序依次为A = x， B = y， C = z的条目， 倘若待格式化的文件有， 并且顺序为C = n, B = m，
+	 * 那么操作的结果将是 A = x, B = m, C = n,
 	 * @param modleFile 模板文件
 	 * @param correctFile 要更改的文件
 	 */
@@ -92,6 +102,44 @@ public class ParserManager {
 		}
 	}
 	
+	/**
+	 * 找出未翻译的, 生成目录, xml
+	 * @param srcDir
+	 * @param destDir
+	 * @param modleFile
+	 */
+	public void createDistinctFile(File srcDir, File destDir, File modleFile) {
+		mFileManager.copyDir(srcDir, destDir, Main.FILE_REGEX);
+		for (File f: mFileManager.getFiles(destDir)) {
+			Map<String, String> stringMap = mParser.parseFile(f, XmlParser.GET_LINE);
+			//直接调用该方法, 有损效率, 因为没有必要替换其中的内容			
+			formatAndComplete(f, modleFile);
+			mParser.remove(f, stringMap);
+		}
+	}
+	
+	/**
+	 * 将src xml文件加入到dest xml文件尾部， 所谓的的尾部， 不是流的尾部， 因为要保证dest文件仍是格式良好的xml
+	 * @param srcDir
+	 * @param destDir
+	 */
+	public void appendFile(File srcDir, File destDir) {
+		
+		Map<String, File> map = new HashMap<String, File>();
+		
+		for (File df: mFileManager.getFiles(destDir, Main.FILE_REGEX)) {
+			map.put(df.getParentFile().getName(), df);
+		}
+		
+		for (File sf: mFileManager.getFiles(srcDir)) {
+			//String valueLaunguageStr = Utils.getValueLaunguageStr(sf);
+			String valueLaunguageStr = sf.getParentFile().getName();
+			File destF = map.get(valueLaunguageStr);
+			//下面两句是合并代码的本质， 是操作单一文件的
+			Map<String, String> parsedFileMap = mParser.parseFile(sf, XmlParser.GET_TEXT_CONTENT);
+			mParser.append(destF, parsedFileMap);
+		}
+	}
 	
 	/**
 	 * 将其他语言未翻译的英文按翻译好的文件翻译过来
@@ -102,6 +150,26 @@ public class ParserManager {
 		for (File f: mFileManager.getFiles(destDir)) {
 			Map<String, String> stringMap = mParser.parseFile(destDir, XmlParser.GET_TEXT_CONTENT);
 			mParser.replaceTextContent(f, stringMap, false);
+		}
+	}
+	
+	
+	
+	/**
+	 * 找出未翻译的, 生成目录, excel
+	 * @param srcDir
+	 * @param destDir
+	 * @param modleFile
+	 */
+	public void createDistinctExcel(File srcDir, File destDir, File modleFile) {
+		createDistinctFile(srcDir, destDir, modleFile);
+		for (File f: mFileManager.getFiles(destDir)) {
+			Map<String, String> stringMap = mParser.parseFile(f, XmlParser.GET_TEXT_CONTENT);
+			String path = f.getAbsolutePath();
+			String copyPath = path.replaceAll("\\.xml", ".xls");
+			mExcelManager.putMap(stringMap, new File(copyPath));
+			File oldFile = new File(path);
+			oldFile.delete();
 		}
 	}
 	
@@ -124,40 +192,4 @@ public class ParserManager {
 		}
 		
 	}
-	
-	/**
-	 * 找出未翻译的, 生成目录, xml
-	 * @param srcDir
-	 * @param destDir
-	 * @param modleFile
-	 */
-	public void createDistinctFile(File srcDir, File destDir, File modleFile) {
-		mFileManager.copyDir(srcDir, destDir, Main.FILE_REGEX);
-		for (File f: mFileManager.getFiles(destDir)) {
-			Map<String, String> stringMap = mParser.parseFile(f, XmlParser.GET_LINE);
-			//直接调用该方法, 有损效率, 因为没有必要替换其中的内容			
-			formatAndComplete(f, modleFile);
-			mParser.remove(f, stringMap);
-		}
-	}
-	
-	/**
-	 * 找出未翻译的, 生成目录, excel
-	 * @param srcDir
-	 * @param destDir
-	 * @param modleFile
-	 */
-	public void createDistinctExcel(File srcDir, File destDir, File modleFile) {
-		createDistinctFile(srcDir, destDir, modleFile);
-		for (File f: mFileManager.getFiles(destDir)) {
-			Map<String, String> stringMap = mParser.parseFile(f, XmlParser.GET_TEXT_CONTENT);
-			String path = f.getAbsolutePath();
-			String copyPath = path.replaceAll("\\.xml", ".xls");
-			mExcelManager.putMap(stringMap, new File(copyPath));
-			File oldFile = new File(path);
-			oldFile.delete();
-		}
-	}
-	
-	
 }

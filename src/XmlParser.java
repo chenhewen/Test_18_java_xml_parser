@@ -1,12 +1,14 @@
 import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.TreeMap;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
@@ -143,6 +145,43 @@ public class XmlParser {
 			//修改后提交
 			TransformerFactory factory2 = TransformerFactory.newInstance();
 			Transformer former = factory2.newTransformer();
+			former.transform(new DOMSource(document), new StreamResult(operateFile));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 在文件尾加入Map对应的字符串
+	 * @param operateFile
+	 * @param stringMap
+	 */
+	public void append(File operateFile, Map<String, String> stringMap) {
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder buidler = null;
+		Document document = null;
+		Element root = null;
+		try {
+			buidler = factory.newDocumentBuilder();
+			document = buidler.parse(operateFile);
+			root = document.getDocumentElement();
+			
+			Iterator<Entry<String, String>> iterator = stringMap.entrySet().iterator();
+			while (iterator.hasNext()) {
+				Entry<String, String> next = iterator.next();
+				String name = next.getKey();
+				String value = next.getValue();
+				Element newChild = document.createElement("string");
+				newChild.setAttribute("name", name);
+				newChild.setTextContent(value);
+				root.appendChild(newChild);
+			}
+			
+			//修改后提交, 留4个空格
+			TransformerFactory factory2 = TransformerFactory.newInstance();
+			Transformer former = factory2.newTransformer();
+			former.setOutputProperty(OutputKeys.INDENT, "yes");
+			former.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
 			former.transform(new DOMSource(document), new StreamResult(operateFile));
 		} catch (Exception e) {
 			e.printStackTrace();
