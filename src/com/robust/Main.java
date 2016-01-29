@@ -1,4 +1,9 @@
+package com.robust;
 import java.io.File;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+import com.robust.cmdline.CmdLine;
 /**
  * 启动类Main
  * @author chenhewen
@@ -25,7 +30,6 @@ public class Main {
 		ParserManager parserManager = new ParserManager();
 		FileManager fileManager = new FileManager();
 		ExcelManager excelManager = new ExcelManager();
-		
 		/**
 		 * 三步骤, 一行一行执行
 		 * 
@@ -46,7 +50,36 @@ public class Main {
 		
 		//parserManager.createDistinctFile(new File(RES_DIR), new File(RES_DIR_DISTICT_EXCEL), new File(ENGLISH_FILEPATH));
 		
-		parserManager.appendFile(new File("F:/桌面/res_inner_v2.0.3_svn204747"), new File("F:/桌面/res"));
+		//parserManager.appendFile(new File("F:/桌面/res_inner_v2.0.3_svn204747"), new File("F:/桌面/res"));
+		
+		String cmd = args[0];
+		String[] methodArgs = new String[args.length - 1];
+		Class<?>[] methodArgsTypeClazz = new Class<?>[args.length - 1];
+		for (int i = 1; i < args.length; i++) {
+			methodArgs[i - 1] = args[i];
+			methodArgsTypeClazz[i - 1] = String.class;
+		}
+		
+		
+		CmdLine cmdLine = new CmdLine();
+		Class<? extends CmdLine> clazz = cmdLine.getClass();
+		try {
+			Method declaredMethod = clazz.getDeclaredMethod(cmd, methodArgsTypeClazz);
+			try {
+				declaredMethod.invoke(cmdLine, (Object[]) methodArgs);
+			} catch (IllegalAccessException e) {
+				e.printStackTrace();
+			} catch (IllegalArgumentException e) {
+				e.printStackTrace();
+			} catch (InvocationTargetException e) {
+				e.printStackTrace();
+			}
+		} catch (NoSuchMethodException e) {
+			//TODO 列出所有支持的命令
+			System.out.println(cmdLine.getSupportedCmd());
+		} catch (SecurityException e) {
+			//TODO
+		}
 		
 		
 		//测试...
