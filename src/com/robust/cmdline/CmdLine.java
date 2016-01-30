@@ -7,6 +7,7 @@ import java.util.Set;
 import org.reflections.Reflections;
 
 import com.robust.cmdline.cmd.Diff;
+import com.robust.cmdline.cmd.Fill;
 
 
 /**
@@ -47,9 +48,14 @@ public class CmdLine {
 		return sb.toString();
 	}
 	
-	public void diff(String resDir, String outputDir, String modleFile) {
+	public void diff(String srcDir, String outputDir, String modleFile) {
 		Diff diff = new Diff();
-		diff.doAction(resDir, outputDir, modleFile);
+		diff.doAction(srcDir, outputDir, modleFile);
+	}
+	
+	public void fill(String srcDir, String destDir) {
+		Fill fill = new Fill();
+		fill.doAction(srcDir, destDir);
 	}
 
 	public String getSupportedCmd() {

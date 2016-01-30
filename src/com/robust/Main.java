@@ -50,7 +50,7 @@ public class Main {
 		
 		//parserManager.createDistinctFile(new File(RES_DIR), new File(RES_DIR_DISTICT_EXCEL), new File(ENGLISH_FILEPATH));
 		
-		//parserManager.appendFile(new File("F:/桌面/res_inner_v2.0.3_svn204747"), new File("F:/桌面/res"));
+		//String[] args = {"fill", "F:/桌面/res.distict.excel", "F:/桌面/res_fill"};
 		
 		String cmd = args[0];
 		String[] methodArgs = new String[args.length - 1];
@@ -75,7 +75,6 @@ public class Main {
 				e.printStackTrace();
 			}
 		} catch (NoSuchMethodException e) {
-			//TODO 列出所有支持的命令
 			System.out.println(cmdLine.getSupportedCmd());
 		} catch (SecurityException e) {
 			//TODO
@@ -108,4 +107,5 @@ public class Main {
 //				excelManager.putMap(map, new File("/home/chenhewen/桌面/excel.xls"));
 		
 	}
+	
 }

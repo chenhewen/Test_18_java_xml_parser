@@ -124,7 +124,7 @@ public class ParserManager {
 	 * @param srcDir
 	 * @param destDir
 	 */
-	public void appendFile(File srcDir, File destDir) {
+public void appendFile(File srcDir, File destDir) {
 		
 		Map<String, File> map = new HashMap<String, File>();
 		
