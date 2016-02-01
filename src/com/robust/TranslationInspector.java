@@ -1,8 +1,12 @@
 package com.robust;
 import java.io.File;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.ResourceBundle;
 import java.util.Set;
+
+import com.robust.values.ResourceBundleManager;
 
 /**
  * 检查翻译的文件是否有问题
@@ -11,6 +15,9 @@ import java.util.Set;
  */
 public class TranslationInspector {
 
+	XmlParser mParser = new XmlParser();
+	FileManager mFileManager = new FileManager();
+	
 	public static class Level {
 		
 		public static final int WRONG = 0;
@@ -33,26 +40,97 @@ public class TranslationInspector {
 	} 
 	
 	/**
-	 * 检查翻译文件的<string name="xxx">yyy</string>
-	 * @param modle 模板文件
-	 * @return true：文件没有问题， 翻译回来的xml文件中的key（也就是name, 对应xxx）没有被修改过， 否则出错。
+	 * 检查翻译文件的<string name="xxx">yyy</string>是否存在比模板多余的name，
+	 * @param comparedFile 模板文件
+	 * @return true：存在多余的。false：一切正常
 	 */
-	public boolean inspectName(File modle, File translationFile) {
-		XmlParser mParser = new XmlParser();
-		Map<String, String> parsedFileMap = mParser.parseFile(modle, XmlParser.GET_TEXT_CONTENT);
-		Set<String> parsedFilekeySet = parsedFileMap.keySet();
+	public boolean checkRedundantNames(File translationFile, File comparedFile) {
+		
+		Map<String, String> comparedFileMap = mParser.parseFile(comparedFile, XmlParser.GET_TEXT_CONTENT);
+		Set<String> comparedFilekeySet = comparedFileMap.keySet();
 		
 		Map<String, String> translationFileMap = mParser.parseFile(translationFile, XmlParser.GET_TEXT_CONTENT);
 		Set<String> translationkeySet = translationFileMap.keySet();
 		Iterator<String> translationIterator = translationkeySet.iterator();
 		
+		boolean exist = false;
+		
 		while (translationIterator.hasNext()) {
 			String name = translationIterator.next();
-			if (!parsedFilekeySet.contains(name)) {
-				return false;
+			if (!comparedFilekeySet.contains(name)) {
+				System.out.println(ResourceBundleManager.getInstance().getResourceBundle().getString("inspector.discover.name.not.exits"));
+				System.out.println("\t" + name);
+				//这里为了将所有的错误都发现并打印， 所以没有提前return false
+				exist = true;
+			}
+		}
+		 
+		return exist;
+	}
+	
+	/**
+	 * 检查是否存在覆盖的翻译。
+	 * @param translationFile
+	 * @param comparedFile
+	 * @return
+	 */
+	public boolean checkOverwriteNames(File translationFile, File comparedFile) {
+		Map<String, String> comparedFileMap = mParser.parseFile(comparedFile, XmlParser.GET_TEXT_CONTENT);
+		Set<String> comparedFilekeySet = comparedFileMap.keySet();
+		
+		Map<String, String> translationFileMap = mParser.parseFile(translationFile, XmlParser.GET_TEXT_CONTENT);
+		Set<String> translationkeySet = translationFileMap.keySet();
+		Iterator<String> translationIterator = translationkeySet.iterator();
+		
+		boolean exist = false;
+		while (translationIterator.hasNext()) {
+			String name = translationIterator.next();
+			if (comparedFilekeySet.contains(name)) {
+				System.out.println(ResourceBundleManager.getInstance().getResourceBundle().getString("inspector.discover.name.already.exits"));
+				System.out.println("\t" + name);
+				//这里为了将所有的错误都发现并打印， 所以没有提前return false
+				exist = true;
+			}
+		}
+		 
+		return exist;
+		
+	}
+	
+	
+	/**
+	 *  判断所有目录下的翻译文件的Key在模板文件中都是存在的， 防止翻译人员误修改Key
+	 * @param translationDir
+	 * @param comparedDir
+	 * @param modle
+	 * @return true有问题， false没有问题
+	 */
+	public boolean checkProblems(File translationDir, File comparedDir, File modle) {
+		boolean problemExist = false;
+		int problemCount = 0;
+		
+		File[] translationFiles = mFileManager.getFiles(translationDir, Main.FILE_TRANSLATE_REGEX);
+		Map<String, File> comparedFileMap = mFileManager.getParentFileMap(comparedDir, Main.FILE_REGEX);
+		
+		for (File f : translationFiles) {
+			Utils.printlnDividerLine();
+			System.out.println(ResourceBundleManager.getInstance().getResourceBundle().getString("inspector.discover.check") + ":" + f.getAbsolutePath());
+			
+			if (checkRedundantNames(f, modle)) {
+				problemExist = true;
+				problemCount++;
+			}
+			
+			String valueLaunguageStr = Utils.getValueLaunguageStr(f);
+			File comparedFile = comparedFileMap.get(valueLaunguageStr);
+			if (checkOverwriteNames(f, comparedFile)) {
+				problemExist = true;
+				problemCount++;
 			}
 		}
 		
-		return true;
+		Utils.printlnDoubleDividerLine();
+		System.out.println(ResourceBundleManager.getInstance().getResourceBundle().getString("inspector.discover.problem") + ":" + problemCount);
+		return problemExist;
 	}
 }

@@ -6,6 +6,7 @@ import java.util.Set;
 
 import org.reflections.Reflections;
 
+import com.robust.cmdline.cmd.Check;
 import com.robust.cmdline.cmd.Diff;
 import com.robust.cmdline.cmd.Fill;
 
@@ -51,6 +52,11 @@ public class CmdLine {
 	public void diff(String srcDir, String outputDir, String modleFile) {
 		Diff diff = new Diff();
 		diff.doAction(srcDir, outputDir, modleFile);
+	}
+	
+	public void check(String srcDir, String outputDir, String modleFile) {
+		Check check = new Check();
+		check.doAction(srcDir, outputDir, modleFile);
 	}
 	
 	public void fill(String srcDir, String destDir) {

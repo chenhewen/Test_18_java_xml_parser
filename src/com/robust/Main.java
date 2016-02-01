@@ -18,9 +18,12 @@ public class Main {
 	
 	public static final String RES_DIR = "F:/桌面/res";
 	public static final String RES_DIR_DISTICT_EXCEL = "F:/桌面/res.distict.excel";
+	public static final String RES_DIR_TRANSLATE = "F:/桌面/translate";
+	public static final String RES_DIR_FILL = "F:/桌面/fill";
 	public static final String RES_DIR_FINAL = "F:/桌面/res.final";
 	//内置
 	public static final String FILE_REGEX = "[sS]trings?\\.xml";
+	public static final String FILE_TRANSLATE_REGEX = "[sS]trings?\\.xml";
 	// 内置外置
 //	public static final String FILE_REGEX = "[sS]trings?.*\\.xml";
 	public static final String ENGLISH_FILEPATH = RES_DIR + "/values/strings.xml";
@@ -30,6 +33,7 @@ public class Main {
 		ParserManager parserManager = new ParserManager();
 		FileManager fileManager = new FileManager();
 		ExcelManager excelManager = new ExcelManager();
+		TranslationInspector translationInspector = new TranslationInspector();
 		/**
 		 * 三步骤, 一行一行执行
 		 * 
@@ -50,7 +54,13 @@ public class Main {
 		
 		//parserManager.createDistinctFile(new File(RES_DIR), new File(RES_DIR_DISTICT_EXCEL), new File(ENGLISH_FILEPATH));
 		
-		//String[] args = {"fill", "F:/桌面/res.distict.excel", "F:/桌面/res_fill"};
+		//translationInspector.checkProblems(new File(RES_DIR_TRANSLATE), new File(RES_DIR), new File(ENGLISH_FILEPATH));
+		
+		
+		//String[] args = {"check", "F:/桌面/translate", "F:/桌面/res", "F:/桌面/res/values/strings.xml"};
+		
+		
+		
 		
 		String cmd = args[0];
 		String[] methodArgs = new String[args.length - 1];

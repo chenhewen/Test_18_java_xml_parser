@@ -124,24 +124,25 @@ public class ParserManager {
 	 * @param srcDir
 	 * @param destDir
 	 */
-public void appendFile(File srcDir, File destDir) {
+	public void appendFile(File srcDir, File destDir) {
 		
-		Map<String, File> map = new HashMap<String, File>();
+		/*Map<String, File> map = new HashMap<String, File>();
 		
 		for (File df: mFileManager.getFiles(destDir, Main.FILE_REGEX)) {
 			map.put(df.getParentFile().getName(), df);
-		}
+		}*/
 		
-		for (File sf: mFileManager.getFiles(srcDir)) {
-			//String valueLaunguageStr = Utils.getValueLaunguageStr(sf);
-			String valueLaunguageStr = sf.getParentFile().getName();
+		Map<String, File> map = mFileManager.getParentFileMap(destDir, Main.FILE_REGEX);
+		
+		for (File sf: mFileManager.getFiles(srcDir, Main.FILE_TRANSLATE_REGEX)) {
+			String valueLaunguageStr = Utils.getValueLaunguageStr(sf);
 			File destF = map.get(valueLaunguageStr);
 			//下面两句是合并代码的本质， 是操作单一文件的
 			Map<String, String> parsedFileMap = mParser.parseFile(sf, XmlParser.GET_TEXT_CONTENT);
 			mParser.append(destF, parsedFileMap);
 		}
 	}
-	
+
 	/**
 	 * 将其他语言未翻译的英文按翻译好的文件翻译过来
 	 * @param insertFile 

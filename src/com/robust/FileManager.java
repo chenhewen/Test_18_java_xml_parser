@@ -2,7 +2,9 @@ package com.robust;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Pattern;
 
 /**
@@ -73,6 +75,21 @@ public class FileManager {
 	
 	public void copyDir(File srcFile, File destFile) {
 		copyDir(srcFile, destFile, ".*");
+	}
+	
+	/**
+	 * 获取满足正则表达式regex文件的父目录， 以map形式保存
+	 * @param dir
+	 * @param regex
+	 * @return
+	 */
+	public Map<String, File> getParentFileMap(File dir, String regex) {
+		Map<String, File> map = new HashMap<String, File>();
+		for (File df: getFiles(dir, regex)) {
+			map.put(df.getParentFile().getName(), df);
+		}
+		
+		return map;
 	}
 	
 }
