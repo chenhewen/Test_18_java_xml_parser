@@ -19,7 +19,7 @@ public class Main {
 	public static final String RES_DIR = "F:/桌面/res";
 	public static final String RES_DIR_DISTICT_EXCEL = "F:/桌面/res.distict.excel";
 	public static final String RES_DIR_TRANSLATE = "F:/桌面/translate";
-	public static final String RES_DIR_FILL = "F:/桌面/fill";
+	public static final String RES_DIR_FILL = "F:/桌面/res_fill";
 	public static final String RES_DIR_FINAL = "F:/桌面/res.final";
 	//内置
 	public static final String FILE_REGEX = "[sS]trings?\\.xml";
@@ -56,10 +56,9 @@ public class Main {
 		
 		//translationInspector.checkProblems(new File(RES_DIR_TRANSLATE), new File(RES_DIR), new File(ENGLISH_FILEPATH));
 		
+		//parserManager.formatDir(new File(RES_DIR_FILL), new File(ENGLISH_FILEPATH));
 		
-		//String[] args = {"check", "F:/桌面/translate", "F:/桌面/res", "F:/桌面/res/values/strings.xml"};
-		
-		
+		//String[] args = {"format", "F:/桌面/res_fill", "F:/桌面/res/values/strings.xml"};
 		
 		
 		String cmd = args[0];

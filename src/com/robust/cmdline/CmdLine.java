@@ -9,6 +9,7 @@ import org.reflections.Reflections;
 import com.robust.cmdline.cmd.Check;
 import com.robust.cmdline.cmd.Diff;
 import com.robust.cmdline.cmd.Fill;
+import com.robust.cmdline.cmd.Format;
 
 
 /**
@@ -64,6 +65,11 @@ public class CmdLine {
 		fill.doAction(srcDir, destDir);
 	}
 
+	public void format(String destDir, String modelFile) {
+		Format format = new Format();
+		format.doAction(destDir, modelFile);
+	}
+	
 	public String getSupportedCmd() {
 		return help();
 	}

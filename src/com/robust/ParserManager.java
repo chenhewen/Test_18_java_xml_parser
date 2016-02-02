@@ -80,6 +80,12 @@ public class ParserManager {
 		formatPrivate(correctFile, modleFile, false);
 	}
 	
+	public void formatDir(File destDir, File modleFile) {
+		for (File f : mFileManager.getFiles(destDir, Main.FILE_REGEX)) {
+			format(f, modleFile);
+		}
+	}
+	
 	/**
 	 * 按照模板的格式，格式化文件, 并且用模板文件补全待格式化文件
 	 * 举例： 模板文件中有，并且顺序依次为A = x， B = y， C = z的条目， 倘若待格式化的文件有， 并且顺序为C = n, B = m，
