@@ -177,11 +177,11 @@ public class Utils {
 		return file.getParentFile().getName();
 	}
 	
-	public static void printlnDividerLine() {
-		System.out.println("-------------------------------");
+	public static CharSequence getDividerLine() {
+		return "-------------------------------";
 	}
 	
-	public static void printlnDoubleDividerLine() {
-		System.out.println("===================");
+	public static CharSequence getDoubleDividerLine() {
+		return "===================";
 	}
 }

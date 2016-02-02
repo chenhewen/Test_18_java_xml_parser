@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.Set;
 
+import com.robust.output.IOutput;
 import com.robust.values.ResourceBundleManager;
 
 /**
@@ -15,6 +16,18 @@ import com.robust.values.ResourceBundleManager;
  */
 public class TranslationInspector {
 
+	IOutput mOutput;
+	
+	public void setOutput(IOutput output) {
+		mOutput = output;
+	}
+	
+	public void output(CharSequence charSequence) {
+		if (mOutput != null) {
+			mOutput.output(charSequence);
+		}
+	}
+	
 	XmlParser mParser = new XmlParser();
 	FileManager mFileManager = new FileManager();
 	
@@ -58,8 +71,8 @@ public class TranslationInspector {
 		while (translationIterator.hasNext()) {
 			String name = translationIterator.next();
 			if (!comparedFilekeySet.contains(name)) {
-				System.out.println(ResourceBundleManager.getInstance().getResourceBundle().getString("inspector.discover.name.not.exits"));
-				System.out.println("\t" + name);
+				output(ResourceBundleManager.getInstance().getResourceBundle().getString("inspector.discover.name.not.exits"));
+				output("\t" + name);
 				//这里为了将所有的错误都发现并打印， 所以没有提前return false
 				exist = true;
 			}
@@ -86,8 +99,8 @@ public class TranslationInspector {
 		while (translationIterator.hasNext()) {
 			String name = translationIterator.next();
 			if (comparedFilekeySet.contains(name)) {
-				System.out.println(ResourceBundleManager.getInstance().getResourceBundle().getString("inspector.discover.name.already.exits"));
-				System.out.println("\t" + name);
+				output(ResourceBundleManager.getInstance().getResourceBundle().getString("inspector.discover.name.already.exits"));
+				output("\t" + name);
 				//这里为了将所有的错误都发现并打印， 所以没有提前return false
 				exist = true;
 			}
@@ -113,7 +126,7 @@ public class TranslationInspector {
 		Map<String, File> comparedFileMap = mFileManager.getParentFileMap(comparedDir, Main.FILE_REGEX);
 		
 		for (File f : translationFiles) {
-			Utils.printlnDividerLine();
+			output(Utils.getDividerLine());
 			System.out.println(ResourceBundleManager.getInstance().getResourceBundle().getString("inspector.discover.check") + ":" + f.getAbsolutePath());
 			
 			if (checkRedundantNames(f, modle)) {
@@ -129,8 +142,8 @@ public class TranslationInspector {
 			}
 		}
 		
-		Utils.printlnDoubleDividerLine();
-		System.out.println(ResourceBundleManager.getInstance().getResourceBundle().getString("inspector.discover.problem") + ":" + problemCount);
+		output(Utils.getDoubleDividerLine());
+		output(ResourceBundleManager.getInstance().getResourceBundle().getString("inspector.discover.problem") + ":" + problemCount);
 		return problemExist;
 	}
 }
