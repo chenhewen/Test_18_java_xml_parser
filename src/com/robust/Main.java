@@ -10,11 +10,6 @@ import com.robust.cmdline.CmdLine;
  *
  */
 public class Main {
-//	public static final String RES_DIR = "/home/chenhewen/桌面/res";
-//	public static final String RES_DIR_DISTICT_EXCEL = "/home/chenhewen/桌面/res.distict.excel";
-//	public static final String RES_DIR_FINAL = "/home/chenhewen/桌面/res.final";
-//	public static final String REGEX = "[sS]trings?\\.xml";
-//	public static final String ENGLISH_FILEPATH = RES_DIR + "/values/strings.xml";
 	
 	public static final String RES_DIR = "F:/桌面/res";
 	public static final String RES_DIR_DISTICT_EXCEL = "F:/桌面/res.distict.excel";
