@@ -4,7 +4,7 @@ import java.util.ResourceBundle;
 
 import com.robust.values.ResourceBundleManager;
 /**
- * 
+ * 全局上下文
  * @author Administrator
  *
  */
