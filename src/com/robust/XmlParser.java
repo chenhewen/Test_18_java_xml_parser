@@ -92,7 +92,8 @@ public class XmlParser {
 			document = buidler.parse(replacedFile);
 			root = document.getDocumentElement();
 			resourcesList = root.getElementsByTagName("string");
-			for (int i = 0; i < resourcesList.getLength(); i++) {
+//			for (int i = 0; i < resourcesList.getLength(); i++) {
+			for (int i = resourcesList.getLength() - 1; i >= 0; i--) {
 				Element element = (Element) resourcesList.item(i);
 				String key = element.getAttribute("name");
 				String textContent = stringMap.get(key);
