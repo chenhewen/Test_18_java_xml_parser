@@ -59,7 +59,8 @@ public class ParserManager {
 
 		//2. 拷贝模板文件到目标文件夹, 并重命名
 		String path = correctFile.getAbsolutePath();
-		String copyPath = path.replaceAll("\\.xml", "tmp.xml");
+		
+		String copyPath = path + ".temp";
 		Utils.copyFile(modleFile.getAbsolutePath(), copyPath);
 
 		//3. 将步骤2中创建的文件中的数据替换未提取的数据, 注意提取数据是其子集
@@ -132,12 +133,6 @@ public class ParserManager {
 	 */
 	public void appendFile(File srcDir, File destDir) {
 		
-		/*Map<String, File> map = new HashMap<String, File>();
-		
-		for (File df: mFileManager.getFiles(destDir, Main.FILE_REGEX)) {
-			map.put(df.getParentFile().getName(), df);
-		}*/
-		
 		Map<String, File> map = mFileManager.getParentFileMap(destDir, Main.FILE_REGEX);
 		
 		for (File sf: mFileManager.getFiles(srcDir, Main.FILE_TRANSLATE_REGEX)) {
@@ -147,57 +142,5 @@ public class ParserManager {
 			Map<String, String> parsedFileMap = mParser.parseFile(sf, XmlParser.GET_TEXT_CONTENT);
 			mParser.append(destF, parsedFileMap);
 		}
-	}
-
-	/**
-	 * 将其他语言未翻译的英文按翻译好的文件翻译过来
-	 * @param insertFile 
-	 * @param translatedFile 翻译好的xml文件
-	 */
-	public void translateFile(File insertFile, File destDir) {
-		for (File f: mFileManager.getFiles(destDir)) {
-			Map<String, String> stringMap = mParser.parseFile(destDir, XmlParser.GET_TEXT_CONTENT);
-			mParser.replaceTextContent(f, stringMap, false);
-		}
-	}
-	
-	
-	
-	/**
-	 * 找出未翻译的, 生成目录, excel
-	 * @param srcDir
-	 * @param destDir
-	 * @param modleFile
-	 */
-	public void createDistinctExcel(File srcDir, File destDir, File modleFile) {
-		createDistinctFile(srcDir, destDir, modleFile);
-		for (File f: mFileManager.getFiles(destDir)) {
-			Map<String, String> stringMap = mParser.parseFile(f, XmlParser.GET_TEXT_CONTENT);
-			String path = f.getAbsolutePath();
-			String copyPath = path.replaceAll("\\.xml", ".xls");
-			mExcelManager.putMap(stringMap, new File(copyPath));
-			File oldFile = new File(path);
-			oldFile.delete();
-		}
-	}
-	
-	/**
-	 * 将其他语言未翻译的英文按翻译好的文件翻译过来
-	 * @param translatedFile 翻译好的Excel文件
-	 * @param insertFile
-	 */
-	public void translateExcel(File translatedFile, File insertFile) {
-		for (File f: mFileManager.getFiles(translatedFile)) {
-			Map<String, String> stringMap = mExcelManager.getMap(f);
-			for (File insertf : mFileManager.getFiles(insertFile)) {
-				String xmlLanguageName = Utils.getLanguageDirName(insertf.getAbsolutePath());
-				String xlsLanguageName = Utils.getLanguageDirName(f.getAbsolutePath());
-				if (xmlLanguageName.equals(xlsLanguageName)) {
-					mParser.replaceTextContent(insertf, stringMap, false);
-					break;
-				}
-			}
-		}
-		
 	}
 }

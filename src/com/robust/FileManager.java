@@ -67,7 +67,7 @@ public class FileManager {
 			String relativePath = srcPath.substring(srcFile.getAbsolutePath().length());
 			String desPath = destFile + relativePath;
 			
-			if (pattern.matcher(new File(desPath).getName()).matches()) {
+			if (pattern.matcher(new File(srcPath).getName()).matches()) {
 				Utils.copyFile(srcPath, desPath);
 			}
 		}
