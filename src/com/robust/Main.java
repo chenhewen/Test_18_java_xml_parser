@@ -30,11 +30,11 @@ public class Main {
 		ExcelManager excelManager = new ExcelManager();
 		TranslationInspector translationInspector = new TranslationInspector();
 		
-		/*parserManager.createDistinctExcel(new File(RES_DIR), new File(RES_DIR_DISTICT_EXCEL), new File(ENGLISH_FILEPATH));
-
-		parserManager.formatAndCompleteDir(new File(RES_DIR), new File(RES_DIR_FINAL), new File(ENGLISH_FILEPATH));
-
-		parserManager.translateExcel(new File(RES_DIR_DISTICT_EXCEL), new File(RES_DIR_FINAL));*/
+		//parserManager.createDistinctFile(new File("F:/桌面/res/values-iw/strings.xml"), new File("F:/桌面/strings-iw.xml"), new File("F:/桌面/res/values/strings.xml"));
+		//translationInspector.checkProblems(new File("F:/桌面/strings-iw.xml"), new File("F:/桌面/res/values-iw/strings.xml"), new File(ENGLISH_FILEPATH));
+		//parserManager.appendFile(new File("F:/桌面/strings-iw.xml"), new File("F:/桌面/res/values-iw/strings.xml"));
+		//parserManager.formatFile(new File("F:/桌面/res2"), new File("F:/桌面/res/values/strings.xml"));
+		
 		
 		//parserManager.createDistinctFile(new File(RES_DIR), new File(RES_DIR_DISTICT_EXCEL), new File(ENGLISH_FILEPATH));
 		
@@ -47,7 +47,7 @@ public class Main {
 		//String[] args = {"format", "F:/桌面/res_fill", "F:/桌面/res/values/strings.xml"};
 		
 		
-		/*String cmd = args[0];
+		String cmd = args[0];
 		String[] methodArgs = new String[args.length - 1];
 		Class<?>[] methodArgsTypeClazz = new Class<?>[args.length - 1];
 		for (int i = 1; i < args.length; i++) {
@@ -73,6 +73,6 @@ public class Main {
 			System.out.println(cmdLine.getSupportedCmd());
 		} catch (SecurityException e) {
 			//TODO
-		}		*/
+		}		
 	}
 }
