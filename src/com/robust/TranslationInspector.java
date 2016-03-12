@@ -10,7 +10,7 @@ import com.robust.output.IOutput;
 import com.robust.values.ResourceBundleManager;
 
 /**
- * ¼ì²é·­ÒëµÄÎÄ¼şÊÇ·ñÓĞÎÊÌâ
+ * æ£€æŸ¥ç¿»è¯‘çš„æ–‡ä»¶æ˜¯å¦æœ‰é—®é¢˜
  * @author Administrator
  *
  */
@@ -53,9 +53,9 @@ public class TranslationInspector {
 	} 
 	
 	/**
-	 * ¼ì²é·­ÒëÎÄ¼şµÄ<string name="xxx">yyy</string>ÊÇ·ñ´æÔÚ±ÈÄ£°å¶àÓàµÄname£¬
-	 * @param comparedFile Ä£°åÎÄ¼ş
-	 * @return true£º´æÔÚ¶àÓàµÄ¡£false£ºÒ»ÇĞÕı³£
+	 * æ£€æŸ¥ç¿»è¯‘æ–‡ä»¶çš„<string name="xxx">yyy</string>æ˜¯å¦å­˜åœ¨æ¯”æ¨¡æ¿å¤šä½™çš„nameï¼Œ
+	 * @param comparedFile æ¨¡æ¿æ–‡ä»¶
+	 * @return trueï¼šå­˜åœ¨å¤šä½™çš„ã€‚falseï¼šä¸€åˆ‡æ­£å¸¸
 	 */
 	public boolean checkRedundantNames(File translationFile, File comparedFile) {
 		
@@ -73,7 +73,7 @@ public class TranslationInspector {
 			if (!comparedFilekeySet.contains(name)) {
 				output(ResourceBundleManager.getInstance().getResourceBundle().getString("inspector.discover.name.not.exits"));
 				output("\t" + name);
-				//ÕâÀïÎªÁË½«ËùÓĞµÄ´íÎó¶¼·¢ÏÖ²¢´òÓ¡£¬ ËùÒÔÃ»ÓĞÌáÇ°return false
+				//è¿™é‡Œä¸ºäº†å°†æ‰€æœ‰çš„é”™è¯¯éƒ½å‘ç°å¹¶æ‰“å°ï¼Œ æ‰€ä»¥æ²¡æœ‰æå‰return false
 				exist = true;
 			}
 		}
@@ -82,7 +82,7 @@ public class TranslationInspector {
 	}
 	
 	/**
-	 * ¼ì²éÊÇ·ñ´æÔÚ¸²¸ÇµÄ·­Òë¡£
+	 * æ£€æŸ¥æ˜¯å¦å­˜åœ¨è¦†ç›–çš„ç¿»è¯‘ã€‚
 	 * @param translationFile
 	 * @param comparedFile
 	 * @return
@@ -101,7 +101,7 @@ public class TranslationInspector {
 			if (comparedFilekeySet.contains(name)) {
 				output(ResourceBundleManager.getInstance().getResourceBundle().getString("inspector.discover.name.already.exits"));
 				output("\t" + name);
-				//ÕâÀïÎªÁË½«ËùÓĞµÄ´íÎó¶¼·¢ÏÖ²¢´òÓ¡£¬ ËùÒÔÃ»ÓĞÌáÇ°return false
+				//è¿™é‡Œä¸ºäº†å°†æ‰€æœ‰çš„é”™è¯¯éƒ½å‘ç°å¹¶æ‰“å°ï¼Œ æ‰€ä»¥æ²¡æœ‰æå‰return false
 				exist = true;
 			}
 		}
@@ -112,11 +112,11 @@ public class TranslationInspector {
 	
 	
 	/**
-	 *  ÅĞ¶ÏËùÓĞÄ¿Â¼ÏÂµÄ·­ÒëÎÄ¼şµÄKeyÔÚÄ£°åÎÄ¼şÖĞ¶¼ÊÇ´æÔÚµÄ£¬ ·ÀÖ¹·­ÒëÈËÔ±ÎóĞŞ¸ÄKey
+	 *  åˆ¤æ–­æ‰€æœ‰ç›®å½•ä¸‹çš„ç¿»è¯‘æ–‡ä»¶çš„Keyåœ¨æ¨¡æ¿æ–‡ä»¶ä¸­éƒ½æ˜¯å­˜åœ¨çš„ï¼Œ é˜²æ­¢ç¿»è¯‘äººå‘˜è¯¯ä¿®æ”¹Key
 	 * @param translationDir
 	 * @param comparedDir
 	 * @param modle
-	 * @return trueÓĞÎÊÌâ£¬ falseÃ»ÓĞÎÊÌâ
+	 * @return trueæœ‰é—®é¢˜ï¼Œ falseæ²¡æœ‰é—®é¢˜
 	 */
 	public boolean checkProblems(File translationDir, File comparedDir, File modle) {
 		boolean problemExist = false;

@@ -81,10 +81,14 @@ public class ParserManager {
 		formatPrivate(correctFile, modleFile, false);
 	}
 	
-	public void formatDir(File destDir, File modleFile) {
-		for (File f : mFileManager.getFiles(destDir, Main.FILE_REGEX)) {
+	public void formatRegexFile(File destDir, File modleFile, String regex) {
+		for (File f : mFileManager.getFiles(destDir, regex)) {
 			format(f, modleFile);
 		}
+	}
+	
+	public void formatFile(File destDir, File modleFile) {
+		formatRegexFile(destDir, modleFile, "*");
 	}
 	
 	/**
@@ -131,6 +135,7 @@ public class ParserManager {
 	 * @param srcDir
 	 * @param destDir
 	 */
+	@Deprecated
 	public void appendFile(File srcDir, File destDir) {
 		
 		Map<String, File> map = mFileManager.getParentFileMap(destDir, Main.FILE_REGEX);
