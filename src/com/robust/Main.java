@@ -1,9 +1,5 @@
 package com.robust;
-import java.io.File;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 
-import com.robust.cmdline.CmdLine;
 /**
  * 启动类Main
  * @author chenhewen
@@ -33,21 +29,9 @@ public class Main {
 		//parserManager.createDistinctFile(new File("F:/桌面/res/values-iw/strings.xml"), new File("F:/桌面/strings-iw.xml"), new File("F:/桌面/res/values/strings.xml"));
 		//translationInspector.checkProblems(new File("F:/桌面/strings-iw.xml"), new File("F:/桌面/res/values-iw/strings.xml"), new File(ENGLISH_FILEPATH));
 		//parserManager.appendFile(new File("F:/桌面/strings-iw.xml"), new File("F:/桌面/res/values-iw/strings.xml"));
-		//parserManager.formatFile(new File("F:/桌面/res2"), new File("F:/桌面/res/values/strings.xml"));
-		
-		
-		//parserManager.createDistinctFile(new File(RES_DIR), new File(RES_DIR_DISTICT_EXCEL), new File(ENGLISH_FILEPATH));
-		
-		//translationInspector.checkProblems(new File(RES_DIR_TRANSLATE), new File(RES_DIR), new File(ENGLISH_FILEPATH));
-		
-		//parserManager.appendFile(new File(RES_DIR_TRANSLATE), new File(RES_DIR));
-		
-		//parserManager.formatDir(new File(RES_DIR), new File(ENGLISH_FILEPATH));
-		
-		//String[] args = {"format", "F:/桌面/res_fill", "F:/桌面/res/values/strings.xml"};
-		
-		
-		String cmd = args[0];
+		//parserManager.formatFile(new File("/home/chenhewen/桌面/backup/V1.0.1/strings 阿语.xml"), new File("/home/chenhewen/桌面/backup/V1.0.1/strings.xml"));
+
+		/*String cmd = args[0];
 		String[] methodArgs = new String[args.length - 1];
 		Class<?>[] methodArgsTypeClazz = new Class<?>[args.length - 1];
 		for (int i = 1; i < args.length; i++) {
@@ -73,6 +57,6 @@ public class Main {
 			System.out.println(cmdLine.getSupportedCmd());
 		} catch (SecurityException e) {
 			//TODO
-		}		
+		}		*/
 	}
 }

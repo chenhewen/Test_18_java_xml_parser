@@ -88,7 +88,7 @@ public class ParserManager {
 	}
 	
 	public void formatFile(File destDir, File modleFile) {
-		formatRegexFile(destDir, modleFile, "*");
+		formatRegexFile(destDir, modleFile, ".*");
 	}
 	
 	/**
