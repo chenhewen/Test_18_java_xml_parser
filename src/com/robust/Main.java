@@ -46,6 +46,12 @@ public class Main {
 		
 		//String[] args = {"format", "F:/桌面/res_fill", "F:/桌面/res/values/strings.xml"};
 		
+//		parserManager.createDistinctFile(new File("F:/桌面/test/value-ru-src.xml"), new File("F:/桌面/test/value-ru-dest.xml"), new File("F:/桌面/test/value-en.xml"));
+		//parserManager.appendFile(new File("F:/桌面/test_append/value-ru-dest.xml"), new File("F:/桌面/test_append/value-ru-src_append.xml"));
+//		parserManager.format(new File("F:/桌面/test_append/value-ru-src_append.xml"), new File("F:/桌面/test_append/value-ru-src.xml"));
+		
+		
+		
 		
 		String cmd = args[0];
 		String[] methodArgs = new String[args.length - 1];

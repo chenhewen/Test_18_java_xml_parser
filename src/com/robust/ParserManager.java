@@ -81,16 +81,6 @@ public class ParserManager {
 		formatPrivate(correctFile, modleFile, false);
 	}
 	
-	public void formatRegexFile(File destDir, File modleFile, String regex) {
-		for (File f : mFileManager.getFiles(destDir, regex)) {
-			format(f, modleFile);
-		}
-	}
-	
-	public void formatFile(File destDir, File modleFile) {
-		formatRegexFile(destDir, modleFile, "*");
-	}
-	
 	/**
 	 * 按照模板的格式，格式化文件, 并且用模板文件补全待格式化文件
 	 * 举例： 模板文件中有，并且顺序依次为A = x， B = y， C = z的条目， 倘若待格式化的文件有， 并且顺序为C = n, B = m，
@@ -116,11 +106,12 @@ public class ParserManager {
 	
 	/**
 	 * 找出未翻译的, 生成目录, xml
+	 * 注意：该方法适用于android目录
 	 * @param srcDir
 	 * @param destDir
 	 * @param modleFile
 	 */
-	public void createDistinctFile(File srcDir, File destDir, File modleFile) {
+	public void createDistinctFiles(File srcDir, File destDir, File modleFile) {
 		mFileManager.copyDir(srcDir, destDir, Main.FILE_REGEX);
 		for (File f: mFileManager.getFiles(destDir)) {
 			Map<String, String> stringMap = mParser.parseFile(f, XmlParser.GET_LINE);
@@ -131,12 +122,27 @@ public class ParserManager {
 	}
 	
 	/**
+	 * 创建未翻译的多语言
+	 *  思路：将文件copy， 然后删除已有的
+	 *  注意：该方法适用于单文件， 一个一个生成
+	 * @param srcFile 已有的多语言文件
+	 * @param destFile 未翻译的多语言输出录
+	 * @param modleFile 英文文件
+	 */
+	public void createDistinctFile(File srcFile, File destFile, File modleFile) {
+		Utils.copyFile(srcFile, destFile);
+		Map<String, String> stringMap = mParser.parseFile(destFile, XmlParser.GET_LINE);
+		//直接调用该方法, 有损效率, 因为没有必要替换其中的内容			
+		formatAndComplete(destFile, modleFile);
+		mParser.remove(destFile, stringMap);
+	}
+	
+	/**
 	 * 将src xml文件加入到dest xml文件尾部， 所谓的的尾部， 不是流的尾部， 因为要保证dest文件仍是格式良好的xml
 	 * @param srcDir
 	 * @param destDir
 	 */
-	@Deprecated
-	public void appendFile(File srcDir, File destDir) {
+	public void appendFiles(File srcDir, File destDir) {
 		
 		Map<String, File> map = mFileManager.getParentFileMap(destDir, Main.FILE_REGEX);
 		
@@ -147,5 +153,12 @@ public class ParserManager {
 			Map<String, String> parsedFileMap = mParser.parseFile(sf, XmlParser.GET_TEXT_CONTENT);
 			mParser.append(destF, parsedFileMap);
 		}
+	}
+	
+	public void appendFile(File srcFile, File destFile) {
+		//下面两句是合并代码的本质， 是操作单一文件的
+		Map<String, String> parsedFileTextContentMap = mParser.parseFile(srcFile, XmlParser.GET_TEXT_CONTENT);
+		Map<String, String> parsedFileLineMap = mParser.parseFile(srcFile, XmlParser.GET_LINE);
+		mParser.appendLine(destFile, parsedFileLineMap, parsedFileTextContentMap);
 	}
 }
