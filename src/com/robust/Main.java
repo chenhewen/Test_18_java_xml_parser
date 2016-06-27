@@ -1,5 +1,6 @@
 package com.robust;
 
+import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
@@ -33,8 +34,8 @@ public class Main {
 		
 		//parserManager.createDistinctFile(new File("F:/桌面/res/values-iw/strings.xml"), new File("F:/桌面/strings-iw.xml"), new File("F:/桌面/res/values/strings.xml"));
 		//translationInspector.checkProblems(new File("F:/桌面/strings-iw.xml"), new File("F:/桌面/res/values-iw/strings.xml"), new File(ENGLISH_FILEPATH));
-		//parserManager.appendFile(new File("F:/桌面/strings-iw.xml"), new File("F:/桌面/res/values-iw/strings.xml"));
-		//parserManager.formatFile(new File("/home/chenhewen/桌面/backup/V1.0.1/strings 阿语.xml"), new File("/home/chenhewen/桌面/backup/V1.0.1/strings.xml"));
+		//parserManager.appendFile(new File("/home/chenhewen/桌面/src_v2 (复件).50_svn219844_trans/Ru strings.xml"), new File("/home/chenhewen/F/android_studio_project/ZBoost_as/zBoost/src/main/res/values-ru/strings.xml"));
+	    //parserManager.formatFile(new File("/home/chenhewen/桌面/test/b.xml"), new File("/home/chenhewen/桌面/test/a.xml"));
 
 		String cmd = args[0];
 		String[] methodArgs = new String[args.length - 1];

@@ -135,7 +135,6 @@ public class ParserManager {
 	 * @param srcDir
 	 * @param destDir
 	 */
-	@Deprecated
 	public void appendFile(File srcDir, File destDir) {
 		
 		Map<String, File> map = mFileManager.getParentFileMap(destDir, Main.FILE_REGEX);
@@ -148,4 +147,9 @@ public class ParserManager {
 			mParser.append(destF, parsedFileMap);
 		}
 	}
+	
+	/*public void appendFile(File srcFile, File destFile ) {
+		Map<String, String> parsedFileMap = mParser.parseFile(srcFile, XmlParser.GET_TEXT_CONTENT);
+		mParser.append(destFile, parsedFileMap);
+	}*/
 }
