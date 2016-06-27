@@ -1,11 +1,9 @@
 package com.robust;
-
 import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 import com.robust.cmdline.CmdLine;
-
 /**
  * 启动类Main
  * @author chenhewen
@@ -32,10 +30,19 @@ public class Main {
 		ExcelManager excelManager = new ExcelManager();
 		TranslationInspector translationInspector = new TranslationInspector();
 		
-		//parserManager.createDistinctFile(new File("F:/桌面/res/values-iw/strings.xml"), new File("F:/桌面/strings-iw.xml"), new File("F:/桌面/res/values/strings.xml"));
-		//translationInspector.checkProblems(new File("F:/桌面/strings-iw.xml"), new File("F:/桌面/res/values-iw/strings.xml"), new File(ENGLISH_FILEPATH));
-		//parserManager.appendFile(new File("/home/chenhewen/桌面/src_v2 (复件).50_svn219844_trans/Ru strings.xml"), new File("/home/chenhewen/F/android_studio_project/ZBoost_as/zBoost/src/main/res/values-ru/strings.xml"));
-	    //parserManager.formatFile(new File("/home/chenhewen/桌面/test/b.xml"), new File("/home/chenhewen/桌面/test/a.xml"));
+		//parserManager.createDistinctFile(new File(RES_DIR), new File(RES_DIR_DISTICT_EXCEL), new File(ENGLISH_FILEPATH));
+		
+		//translationInspector.checkProblems(new File(RES_DIR_TRANSLATE), new File(RES_DIR), new File(ENGLISH_FILEPATH));
+		
+		//parserManager.appendFile(new File(RES_DIR_TRANSLATE), new File(RES_DIR));
+		
+		//parserManager.formatDir(new File(RES_DIR), new File(ENGLISH_FILEPATH));
+		
+		//String[] args = {"format", "F:/桌面/res_fill", "F:/桌面/res/values/strings.xml"};
+		
+//		parserManager.createDistinctFile(new File("F:/桌面/test/value-ru-src.xml"), new File("F:/桌面/test/value-ru-dest.xml"), new File("F:/桌面/test/value-en.xml"));
+		//parserManager.appendFile(new File("F:/桌面/test_append/value-ru-dest.xml"), new File("F:/桌面/test_append/value-ru-src_append.xml"));
+//		parserManager.format(new File("F:/桌面/test_append/value-ru-src_append.xml"), new File("F:/桌面/test_append/value-ru-src.xml"));
 
 		String cmd = args[0];
 		String[] methodArgs = new String[args.length - 1];

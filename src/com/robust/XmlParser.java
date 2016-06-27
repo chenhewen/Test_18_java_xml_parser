@@ -1,4 +1,5 @@
 package com.robust;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
@@ -17,6 +18,7 @@ import javax.xml.transform.stream.StreamResult;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
@@ -148,6 +150,63 @@ public class XmlParser {
 			//修改后提交
 			TransformerFactory factory2 = TransformerFactory.newInstance();
 			Transformer former = factory2.newTransformer();
+			former.transform(new DOMSource(document), new StreamResult(operateFile));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public Node getNodeFromXmlStr(DocumentBuilder documentBuilder, Document document, String xml) {
+
+		Element element = null;
+		
+		try {
+			element = documentBuilder
+					.parse(new ByteArrayInputStream(xml.getBytes()))
+					.getDocumentElement();
+		} catch (SAXException | IOException e) {
+			e.printStackTrace();
+		}
+
+		
+		Element newChild = document.createElement(element.getTagName());
+		
+		NamedNodeMap attributes = element.getAttributes();
+		for (int i = 0; i < attributes.getLength(); i++) {
+			Node item = attributes.item(i);
+			newChild.setAttribute(item.getNodeName(), item.getNodeValue());
+		}
+		
+		return newChild;
+	}
+	
+	public void appendLine(File operateFile, Map<String, String> LineMap, Map<String, String> contentMap) {
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder buidler = null;
+		Document document = null;
+		Element root = null;
+		try {
+			buidler = factory.newDocumentBuilder();
+			document = buidler.parse(operateFile);
+			root = document.getDocumentElement();
+			
+			Iterator<Entry<String, String>> iterator = LineMap.entrySet().iterator();
+			while (iterator.hasNext()) {
+				Entry<String, String> next = iterator.next();
+				String name = next.getKey();
+				String line = next.getValue();
+				
+				Node newChild = getNodeFromXmlStr(buidler, document, line);
+				newChild.setTextContent(contentMap.get(name));
+				
+				root.appendChild(newChild);
+			}
+			
+			//修改后提交, 留4个空格
+			TransformerFactory factory2 = TransformerFactory.newInstance();
+			Transformer former = factory2.newTransformer();
+			former.setOutputProperty(OutputKeys.INDENT, "yes");
+			former.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
 			former.transform(new DOMSource(document), new StreamResult(operateFile));
 		} catch (Exception e) {
 			e.printStackTrace();

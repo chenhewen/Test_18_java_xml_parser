@@ -73,19 +73,40 @@ public class Utils {
 		}
 	}
 	
-	public static boolean copyFile(String srcStr, String decStr) {
-		// 前提
-		File srcFile = new File(srcStr);
-		if (!srcFile.exists()) {
-			return false;
-		}
-		File decFile = new File(decStr);
-		if (!decFile.exists()) {
-			File parent = decFile.getParentFile();
+	public static boolean createIfNotExist(File destFile) {
+		
+		boolean success = true;
+		
+		if (!destFile.exists()) {
+			File parent = destFile.getParentFile();
 			boolean b = parent.mkdirs();
 
 			try {
-				decFile.createNewFile();
+				destFile.createNewFile();
+			} catch (Exception e) {
+				e.printStackTrace();
+				success = false;
+			}
+		}
+		
+		return success;
+	}
+	
+	public static boolean copyFile(String srcStr, String decStr) {
+		return copyFile(new File(srcStr), new File(decStr));
+	}
+	
+	public static boolean copyFile(File srcFile, File destFile) {
+		if (!srcFile.exists()) {
+			return false;
+		}
+		
+		if (!destFile.exists()) {
+			File parent = destFile.getParentFile();
+			boolean b = parent.mkdirs();
+
+			try {
+				destFile.createNewFile();
 
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -96,7 +117,7 @@ public class Utils {
 		OutputStream output = null;
 		try {
 			input = new FileInputStream(srcFile);
-			output = new FileOutputStream(decFile);
+			output = new FileOutputStream(destFile);
 			byte[] data = new byte[4 * 1024]; // 4k
 			while (true) {
 				int len = input.read(data);
@@ -104,10 +125,6 @@ public class Utils {
 					break;
 				}
 				output.write(data, 0, len);
-
-				// just test how it will perform when a exception occure on
-				// backing up
-				// throw new IOException();
 			}
 		} catch (Exception e) {
 			return false;
@@ -127,7 +144,7 @@ public class Utils {
 				}
 			}
 		}
-
+		
 		return true;
 	}
 	
@@ -184,4 +201,5 @@ public class Utils {
 	public static CharSequence getDoubleDividerLine() {
 		return "===================";
 	}
+
 }
