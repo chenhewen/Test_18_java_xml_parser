@@ -123,7 +123,7 @@ public class TranslationInspector {
 		int problemCount = 0;
 		
 		File[] translationFiles = mFileManager.getFiles(translationDir, Main.FILE_TRANSLATE_REGEX);
-		Map<String, File> comparedFileMap = mFileManager.getParentFileMap(comparedDir, Main.FILE_REGEX);
+		Map<String, File> comparedFileMap = mFileManager.getParentFileMap(comparedDir, Main.FILE_ANDROID_STRUCTURE_REGEX);
 		
 		for (File f : translationFiles) {
 			output(Utils.getDividerLine());

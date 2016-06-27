@@ -17,7 +17,8 @@ public class Main {
 	public static final String RES_DIR_FILL = "F:/桌面/res_fill";
 	public static final String RES_DIR_FINAL = "F:/桌面/res.final";
 	//内置
-	public static final String FILE_REGEX = "[sS]trings?\\.xml";
+	public static final String FILE_ANDROID_STRUCTURE_REGEX = "[sS]trings?\\.xml";
+	public static final String FILE_FLAT_STRUCTURE_REGEX = "[sS]trings?_.*\\.xml";
 	public static final String FILE_TRANSLATE_REGEX = "[sS]trings?\\.xml";
 	// 内置外置
 //	public static final String FILE_REGEX = "[sS]trings?.*\\.xml";
@@ -44,6 +45,8 @@ public class Main {
 		//parserManager.appendFile(new File("F:/桌面/test_append/value-ru-dest.xml"), new File("F:/桌面/test_append/value-ru-src_append.xml"));
 //		parserManager.format(new File("F:/桌面/test_append/value-ru-src_append.xml"), new File("F:/桌面/test_append/value-ru-src.xml"));
 
+		//parserManager.createDistinctFilesInFlatFolderStructure(new File("/home/chenhewen/F/SVN/ZBoost/Release/languages/v2.3.0"), new File("/home/chenhewen/桌面/test"), new File("/home/chenhewen/F/android_studio_project/ZBoost_as/zBoost/src/main/res/values/strings.xml"));
+		
 		String cmd = args[0];
 		String[] methodArgs = new String[args.length - 1];
 		Class<?>[] methodArgsTypeClazz = new Class<?>[args.length - 1];
