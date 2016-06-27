@@ -12,7 +12,7 @@ public class Diff extends BaseCmd {
 	@Override
 	public void doAction(String... strings) {
 		ParserManager parserManager = new ParserManager();
-		parserManager.createDistinctFiles(new File(strings[0]), new File(strings[1]), new File(strings[2]));
+		parserManager.createDistinctFilesInAndroidFolderStructure(new File(strings[0]), new File(strings[1]), new File(strings[2]));
 	}
 	
 	@Override

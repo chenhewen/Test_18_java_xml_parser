@@ -108,7 +108,7 @@ public class ParserManager {
 	 * @param modleFile
 	 */
 	public void formatAndCompleteDir(File srcDir, File destDir, File modleFile) {
-		mFileManager.copyDir(srcDir, destDir, Main.FILE_REGEX);
+		mFileManager.copyDir(srcDir, destDir, Main.FILE_ANDROID_STRUCTURE_REGEX);
 		for (File f : mFileManager.getFiles(destDir)) {
 			formatAndComplete(f, modleFile);
 		}
@@ -119,16 +119,23 @@ public class ParserManager {
 	 * 注意：该方法适用于android目录
 	 * @param srcDir
 	 * @param destDir
-	 * @param modleFile
+	 * @param modelFile
 	 */
-	public void createDistinctFiles(File srcDir, File destDir, File modleFile) {
-		mFileManager.copyDir(srcDir, destDir, Main.FILE_REGEX);
-		for (File f: mFileManager.getFiles(destDir)) {
-			Map<String, String> stringMap = mParser.parseFile(f, XmlParser.GET_LINE);
-			//直接调用该方法, 有损效率, 因为没有必要替换其中的内容			
-			formatAndComplete(f, modleFile);
-			mParser.remove(f, stringMap);
-		}
+	public void createDistinctFilesInAndroidFolderStructure(File srcDir, File destDir, File modelFile) {
+		mFileManager.copyDir(srcDir, destDir, Main.FILE_ANDROID_STRUCTURE_REGEX);
+		createDistinctPrivate(srcDir, destDir, modelFile);
+	}
+	
+	/**
+	 * 找出未翻译的, 生成目录, 项目了
+	 * 注意: 该方法适用与扁平目录(目录下直接是多语言xml文件)
+	 * @param srcDir
+	 * @param destDir
+	 * @param modelFile
+	 */
+	public void createDistinctFilesInFlatFolderStructure(File srcDir, File destDir, File modelFile) {
+		mFileManager.copyDir(srcDir, destDir, Main.FILE_FLAT_STRUCTURE_REGEX);
+		createDistinctPrivate(srcDir, destDir, modelFile);
 	}
 	
 	/**
@@ -137,14 +144,20 @@ public class ParserManager {
 	 *  注意：该方法适用于单文件， 一个一个生成
 	 * @param srcFile 已有的多语言文件
 	 * @param destFile 未翻译的多语言输出录
-	 * @param modleFile 英文文件
+	 * @param modelFile 英文文件
 	 */
-	public void createDistinctFile(File srcFile, File destFile, File modleFile) {
+	public void createDistinctSingleFile(File srcFile, File destFile, File modelFile) {
 		Utils.copyFile(srcFile, destFile);
-		Map<String, String> stringMap = mParser.parseFile(destFile, XmlParser.GET_LINE);
-		//直接调用该方法, 有损效率, 因为没有必要替换其中的内容			
-		formatAndComplete(destFile, modleFile);
-		mParser.remove(destFile, stringMap);
+		createDistinctPrivate(srcFile, destFile, modelFile);
+	}
+	
+	private void createDistinctPrivate(File srcDir, File destDir, File modelFile) {
+		for (File srcFile: mFileManager.getFiles(destDir)) {
+			Map<String, String> stringMap = mParser.parseFile(srcFile, XmlParser.GET_LINE);
+			//直接调用该方法, 有损效率, 因为没有必要替换其中的内容			
+			formatAndComplete(srcFile, modelFile);
+			mParser.remove(srcFile, stringMap);
+		}
 	}
 	
 	/**
@@ -154,7 +167,7 @@ public class ParserManager {
 	 */
 	public void appendFiles(File srcDir, File destDir) {
 		
-		Map<String, File> map = mFileManager.getParentFileMap(destDir, Main.FILE_REGEX);
+		Map<String, File> map = mFileManager.getParentFileMap(destDir, Main.FILE_ANDROID_STRUCTURE_REGEX);
 		
 		for (File sf: mFileManager.getFiles(srcDir, Main.FILE_TRANSLATE_REGEX)) {
 			String valueLaunguageStr = Utils.getValueLaunguageStr(sf);
